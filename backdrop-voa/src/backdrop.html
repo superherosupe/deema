@@ -33,40 +33,41 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 .tlqt img{height:112px;display:block}
 .tlqt small{display:block;font-size:14px;font-weight:700;letter-spacing:3px;color:#1b3a8f;margin-top:4px}
 /* cards */
-.cards{position:absolute;left:70px;right:70px;top:238px;bottom:128px;display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:34px}
-.card{position:relative;background:rgba(255,255,255,.96);border-radius:34px;color:#10214a;overflow:hidden;
-  box-shadow:0 24px 60px rgba(0,0,0,.35);display:flex;flex-direction:column}
-.card::before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:var(--c)}
-.head{height:118px;display:flex;align-items:center;justify-content:space-between;padding:30px 30px 18px;border-bottom:2px dashed #e3e8f2}
+.cards{position:absolute;left:60px;right:60px;top:232px;bottom:124px;display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:30px}
+.card{position:relative;background:#fff;border-radius:34px;color:#10214a;overflow:hidden;
+  box-shadow:0 24px 60px rgba(0,0,0,.4);display:flex;flex-direction:column;border:4px solid rgba(255,255,255,.9)}
+.head{height:112px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:22px 28px;background:#fff}
 .head .logo{height:62px}
 .certs{height:34px;filter:brightness(0) saturate(100%) invert(18%) sepia(40%) saturate(2000%) hue-rotate(210deg)}
-.body{flex:1;padding:18px 30px 26px;display:flex;flex-direction:column}
-.pill{display:inline-block;align-self:flex-start;background:var(--c);color:#fff;font-weight:800;font-size:25px;
-  padding:10px 22px;border-radius:40px;line-height:1.2}
+.stage{flex:1;min-height:0;display:flex;flex-direction:column;position:relative;background:var(--stage)}
+.stage::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 45% at 50% 55%,rgba(255,255,255,.22),transparent 70%);pointer-events:none}
+.chip{background:#fff;border-radius:18px;padding:10px 20px;box-shadow:0 8px 20px rgba(0,0,0,.25);display:inline-flex;align-items:center;position:relative}
+.lbl{font-size:28px;font-weight:800;color:#fff;line-height:1.2;text-shadow:0 3px 10px rgba(0,0,0,.35);position:relative}
+.shadow{filter:drop-shadow(0 14px 18px rgba(0,0,0,.45))}
 /* curexo */
-.cx{--c:linear-gradient(90deg,#ff9a1a,#ff3d6e)}
-.cx .body{align-items:center;text-align:center}
-.cx .cuvis{height:88px;margin:8px 0 14px}
-.cx .robot{flex:1 1 0;height:0;min-height:0;max-width:100%;object-fit:contain;margin-top:10px}
+.cx{--stage:linear-gradient(165deg,#ffa04a 0%,#ff5a5a 45%,#c42a78 100%)}
+.cx .stage{align-items:center;text-align:center;padding:24px 20px 20px;gap:14px}
+.cx .chip img{height:74px}
+.cx .robot{flex:1 1 0;height:0;min-height:0;max-width:100%;object-fit:contain;position:relative}
 /* allgens */
-.ag{--c:linear-gradient(90deg,#16c47f,#0fa3b1)}
-.ag .head .logo{height:84px}
-.prod{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;padding:14px 0}
-.prod+.prod{border-top:2px dashed #e3e8f2}
-.prod .pl{height:62px}
-.prod .pi{height:122px;max-width:100%;object-fit:contain}
+.ag{--stage:linear-gradient(170deg,#0fb38a 0%,#0a7f86 55%,#0a4f7a 100%)}
+.ag .head .logo{height:80px}
+.prod{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:14px 18px;position:relative}
+.prod+.prod{border-top:2px solid rgba(255,255,255,.25)}
+.prod .chip img{height:52px}
+.prod .pi{height:128px;max-width:100%;object-fit:contain;position:relative}
 /* mantiz */
-.mz{--c:linear-gradient(90deg,#2f6bff,#8a2cff)}
-.mz .body{padding-top:8px;gap:0}
-.row{flex:1;display:grid;grid-template-columns:1fr 210px;align-items:center;column-gap:10px}
-.row+.row{border-top:2px dashed #e3e8f2}
-.row .pl{height:48px;display:block;margin-bottom:10px}
+.mz{--stage:linear-gradient(170deg,#e4ecff 0%,#efe6ff 100%)}
+.mz .stage::before{display:none}
+.mz .stage{padding:4px 24px 8px}
+.row{flex:1;display:grid;grid-template-columns:1fr 250px;align-items:center;column-gap:10px}
+.row+.row{border-top:2px solid #fff}
+.row .pl{height:50px;display:block;margin-bottom:10px}
 .row .pl.tall{height:58px}
-.row .txt{font-size:23px;font-weight:700;color:#2a3a66;line-height:1.25}
-.row .txt:before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:#8a2cff;margin-right:10px;vertical-align:middle}
-.row .imgs{display:flex;justify-content:center;align-items:center;gap:8px;height:120px}
-.row .imgs img{max-height:100%;max-width:100%;object-fit:contain}
-.row .imgs.two img{max-width:48%;max-height:80%}
+.row .txt{text-wrap:balance;font-size:27px;font-weight:800;color:#1d2b5c;line-height:1.2}
+.row .imgs{display:flex;justify-content:center;align-items:center;gap:10px;height:132px}
+.row .imgs img{max-height:100%;max-width:100%;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(40,30,110,.35))}
+.row .imgs.two img{max-width:48%;max-height:88%}
 /* footer */
 .foot{position:absolute;left:0;right:0;bottom:0;height:100px;display:flex;align-items:center;justify-content:center;gap:40px;
   background:linear-gradient(90deg,rgba(255,61,110,.95),rgba(138,44,255,.95),rgba(30,107,255,.95))}
@@ -98,24 +99,24 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 <div class="cards">
   <div class="card cx">
     <div class="head"><img class="logo" src="img/43.png" alt="Curexo"><img class="certs" src="img/42.png" alt="CE FDA"></div>
-    <div class="body">
-      <img class="cuvis" src="img/38.png" alt="CUVIS Spine">
-      <span class="pill">Robot định vị phẫu thuật cột sống</span>
-      <img class="robot" src="img/37.png" alt="">
+    <div class="stage">
+      <span class="chip"><img src="img/38.png" alt="CUVIS Spine"></span>
+      <span class="lbl">Robot định vị phẫu thuật cột sống</span>
+      <img class="robot shadow" src="img/37.png" alt="">
     </div>
   </div>
 
   <div class="card ag">
     <div class="head"><img class="logo" src="img/35.png" alt="Allgens"><img class="certs" src="img/44.png" alt="FDA ISO"></div>
-    <div class="body">
-      <div class="prod"><img class="pl" src="img/23.png" alt="BonGold"><img class="pi" src="img/40.png" alt=""><span class="pill">Xương nhân tạo · Chỉnh hình</span></div>
-      <div class="prod"><img class="pl" src="img/34.png" alt="Skulheal"><img class="pi" src="img/36.png" alt=""><span class="pill">Xương nhân tạo · Thần kinh</span></div>
+    <div class="stage">
+      <div class="prod"><span class="chip"><img src="img/23.png" alt="BonGold"></span><img class="pi shadow" src="img/40.png" alt=""><span class="lbl">Xương nhân tạo · Chỉnh hình</span></div>
+      <div class="prod"><span class="chip"><img src="img/34.png" alt="Skulheal"></span><img class="pi shadow" src="img/36.png" alt=""><span class="lbl">Xương nhân tạo · Thần kinh</span></div>
     </div>
   </div>
 
   <div class="card mz">
     <div class="head"><img class="logo" src="img/19.png" alt="Mantiz"><img class="certs" src="img/41.png" alt="ISO GMP" style="height:62px;filter:none"></div>
-    <div class="body">
+    <div class="stage">
       <div class="row"><div><img class="pl tall" src="img/24.png" alt="Panther"><div class="txt">Lồng cột sống thắt lưng in 3D</div></div><div class="imgs two"><img src="img/25.png"><img src="img/26.png"></div></div>
       <div class="row"><div><img class="pl tall" src="img/27.png" alt="Petra"><div class="txt">Lồng cột sống cổ in 3D</div></div><div class="imgs two"><img src="img/28.png"><img src="img/29.png"></div></div>
       <div class="row"><div><img class="pl" src="img/30.png" alt="Quattro"><div class="txt">Vít cuống sống</div></div><div class="imgs"><img src="img/31.png"></div></div>
@@ -125,6 +126,6 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 </div>
 
 <div class="foot">
-  <span class="l">LIÊN HỆ</span><span class="p">0916 899 322</span><span class="sep"></span><span class="s">Curexo · Allgens · Mantiz</span>
+  <span class="l">LIÊN HỆ</span><span class="p">0916 899 322</span>
 </div>
 </body></html>
