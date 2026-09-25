@@ -12,6 +12,7 @@ const hex=c=>{const m=c.match(/\d+/g).map(Number);return m.slice(0,3).map(v=>v.t
 for(const t of d.texts){
   const slack=t.w*0.14; let x=t.x,w=t.w+slack;
   if(t.align==='center') x=t.x-slack/2;
+  if(t.cls==='EM'){t.align='center';x=t.x;w=t.w;}
   const base={x:P(x),y:P(t.y-t.h*0.1),w:P(w),h:P(t.h*1.2),fontFace:'Arial',fontSize:t.fs*0.5,bold:+t.fw>=700,italic:!!t.italic,
     align:t.align==='center'?'center':'left',valign:'middle',margin:0,charSpacing:t.ls*0.5,isTextBox:true,fit:'none'};
   if(t.cls==='H1'){
