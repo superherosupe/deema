@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"><title>Backdrop VOA</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--cx:#ff6a1a;--ag:#19b85a;--mz:#1e6bff}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#12093a}
+body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
+.bg{position:absolute;inset:0;overflow:hidden;
+  background:
+   radial-gradient(900px 700px at 0% 100%, #ff2e8a 0%, transparent 60%),
+   radial-gradient(800px 650px at 100% 0%, #00d4ff 0%, transparent 60%),
+   radial-gradient(700px 600px at 55% 115%, #ffb300 0%, transparent 60%),
+   radial-gradient(700px 520px at 10% 0%, #7b2cff 0%, transparent 65%),
+   radial-gradient(650px 520px at 100% 100%, #00e0a0 0%, transparent 60%),
+   linear-gradient(135deg,#2a0f7a 0%,#1a0a55 45%,#0c2a7a 100%);}
+.bg::before{content:"";position:absolute;inset:-20%;
+  background:repeating-linear-gradient(115deg,rgba(255,255,255,.07) 0 2px,transparent 2px 46px);
+  mask:linear-gradient(180deg,transparent,#000 40%,transparent)}
+.ring{position:absolute;border-radius:50%;border:3px solid rgba(255,255,255,.18)}
+.dots{position:absolute;width:260px;height:260px;
+  background:radial-gradient(circle,rgba(255,255,255,.35) 2.5px,transparent 3px) 0 0/22px 22px}
+.streak{position:absolute;height:6px;border-radius:6px;transform:rotate(-24deg)}
+/* header */
+.top{position:absolute;left:70px;right:70px;top:46px;height:150px;display:flex;align-items:center;justify-content:space-between}
+.welcome .k{font-size:26px;font-weight:700;letter-spacing:6px;color:#ffe066}
+.welcome h1{font-size:92px;line-height:1;font-weight:900;letter-spacing:2px;
+  background:linear-gradient(90deg,#fff 0%,#ffe066 45%,#ff8ac2 100%);-webkit-background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 18px rgba(0,0,0,.35))}
+.welcome .t{margin-top:10px;font-size:30px;font-weight:600;color:#e8f4ff}
+.welcome .t b{color:#7ff0ff}
+.tlqt{background:#fff;border-radius:28px;padding:16px 30px;box-shadow:0 14px 40px rgba(0,0,0,.35);text-align:center}
+.tlqt img{height:112px;display:block}
+.tlqt small{display:block;font-size:14px;font-weight:700;letter-spacing:3px;color:#1b3a8f;margin-top:4px}
+/* cards */
+.cards{position:absolute;left:70px;right:70px;top:238px;bottom:128px;display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:34px}
+.card{position:relative;background:rgba(255,255,255,.96);border-radius:34px;color:#10214a;overflow:hidden;
+  box-shadow:0 24px 60px rgba(0,0,0,.35);display:flex;flex-direction:column}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:var(--c)}
+.head{height:118px;display:flex;align-items:center;justify-content:space-between;padding:30px 30px 18px;border-bottom:2px dashed #e3e8f2}
+.head .logo{height:62px}
+.certs{height:34px;filter:brightness(0) saturate(100%) invert(18%) sepia(40%) saturate(2000%) hue-rotate(210deg)}
+.body{flex:1;padding:18px 30px 26px;display:flex;flex-direction:column}
+.pill{display:inline-block;align-self:flex-start;background:var(--c);color:#fff;font-weight:800;font-size:25px;
+  padding:10px 22px;border-radius:40px;line-height:1.2}
+/* curexo */
+.cx{--c:linear-gradient(90deg,#ff9a1a,#ff3d6e)}
+.cx .body{align-items:center;text-align:center}
+.cx .cuvis{height:88px;margin:8px 0 14px}
+.cx .robot{flex:1 1 0;height:0;min-height:0;max-width:100%;object-fit:contain;margin-top:10px}
+/* allgens */
+.ag{--c:linear-gradient(90deg,#16c47f,#0fa3b1)}
+.ag .head .logo{height:84px}
+.prod{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;padding:14px 0}
+.prod+.prod{border-top:2px dashed #e3e8f2}
+.prod .pl{height:62px}
+.prod .pi{height:122px;max-width:100%;object-fit:contain}
+/* mantiz */
+.mz{--c:linear-gradient(90deg,#2f6bff,#8a2cff)}
+.mz .body{padding-top:8px;gap:0}
+.row{flex:1;display:grid;grid-template-columns:1fr 210px;align-items:center;column-gap:10px}
+.row+.row{border-top:2px dashed #e3e8f2}
+.row .pl{height:48px;display:block;margin-bottom:10px}
+.row .pl.tall{height:58px}
+.row .txt{font-size:23px;font-weight:700;color:#2a3a66;line-height:1.25}
+.row .txt:before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:#8a2cff;margin-right:10px;vertical-align:middle}
+.row .imgs{display:flex;justify-content:center;align-items:center;gap:8px;height:120px}
+.row .imgs img{max-height:100%;max-width:100%;object-fit:contain}
+.row .imgs.two img{max-width:48%;max-height:80%}
+/* footer */
+.foot{position:absolute;left:0;right:0;bottom:0;height:100px;display:flex;align-items:center;justify-content:center;gap:40px;
+  background:linear-gradient(90deg,rgba(255,61,110,.95),rgba(138,44,255,.95),rgba(30,107,255,.95))}
+.foot .l{font-size:28px;font-weight:700;letter-spacing:3px;color:#ffe9a8}
+.foot .p{font-size:52px;font-weight:900;letter-spacing:3px}
+.foot .sep{width:3px;height:48px;background:rgba(255,255,255,.5)}
+.foot .s{font-size:26px;font-weight:600}
+</style></head><body>
+<div class="bg">
+  <div class="ring" style="width:520px;height:520px;right:-160px;top:-200px"></div>
+  <div class="ring" style="width:340px;height:340px;right:-60px;top:-110px;border-color:rgba(255,224,102,.35)"></div>
+  <div class="ring" style="width:620px;height:620px;left:-280px;bottom:-330px;border-color:rgba(255,138,194,.35)"></div>
+  <div class="dots" style="left:620px;top:20px"></div>
+  <div class="dots" style="right:40px;bottom:120px;opacity:.6"></div>
+  <div class="streak" style="width:420px;left:900px;top:60px;background:linear-gradient(90deg,transparent,#ffe066)"></div>
+  <div class="streak" style="width:300px;left:1000px;top:110px;background:linear-gradient(90deg,transparent,#ff5fa8)"></div>
+  <div class="streak" style="width:240px;left:1080px;top:150px;background:linear-gradient(90deg,transparent,#5ff0ff)"></div>
+</div>
+
+<div class="top">
+  <div class="welcome">
+    <div class="k">CHÀO MỪNG QUÝ ĐẠI BIỂU THAM DỰ</div>
+    <h1>HỘI NGHỊ VOA</h1>
+    <div class="t">Giải pháp toàn diện cho <b>Phẫu thuật Cột sống &amp; Chấn thương Chỉnh hình</b></div>
+  </div>
+  <div class="tlqt"><img src="img/39.png" alt="Thăng Long Quốc Tế"><small>NHÀ PHÂN PHỐI</small></div>
+</div>
+
+<div class="cards">
+  <div class="card cx">
+    <div class="head"><img class="logo" src="img/43.png" alt="Curexo"><img class="certs" src="img/42.png" alt="CE FDA"></div>
+    <div class="body">
+      <img class="cuvis" src="img/38.png" alt="CUVIS Spine">
+      <span class="pill">Robot định vị phẫu thuật cột sống</span>
+      <img class="robot" src="img/37.png" alt="">
+    </div>
+  </div>
+
+  <div class="card ag">
+    <div class="head"><img class="logo" src="img/35.png" alt="Allgens"><img class="certs" src="img/44.png" alt="FDA ISO"></div>
+    <div class="body">
+      <div class="prod"><img class="pl" src="img/23.png" alt="BonGold"><img class="pi" src="img/40.png" alt=""><span class="pill">Xương nhân tạo · Chỉnh hình</span></div>
+      <div class="prod"><img class="pl" src="img/34.png" alt="Skulheal"><img class="pi" src="img/36.png" alt=""><span class="pill">Xương nhân tạo · Thần kinh</span></div>
+    </div>
+  </div>
+
+  <div class="card mz">
+    <div class="head"><img class="logo" src="img/19.png" alt="Mantiz"><img class="certs" src="img/41.png" alt="ISO GMP" style="height:62px;filter:none"></div>
+    <div class="body">
+      <div class="row"><div><img class="pl tall" src="img/24.png" alt="Panther"><div class="txt">Lồng cột sống thắt lưng in 3D</div></div><div class="imgs two"><img src="img/25.png"><img src="img/26.png"></div></div>
+      <div class="row"><div><img class="pl tall" src="img/27.png" alt="Petra"><div class="txt">Lồng cột sống cổ in 3D</div></div><div class="imgs two"><img src="img/28.png"><img src="img/29.png"></div></div>
+      <div class="row"><div><img class="pl" src="img/30.png" alt="Quattro"><div class="txt">Vít cuống sống</div></div><div class="imgs"><img src="img/31.png"></div></div>
+      <div class="row"><div><img class="pl tall" src="img/32.png" alt="Gadget"><div class="txt">Vít qua da xâm lấn tối thiểu</div></div><div class="imgs"><img src="img/33.png"></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <span class="l">LIÊN HỆ</span><span class="p">0916 899 322</span><span class="sep"></span><span class="s">Curexo · Allgens · Mantiz</span>
+</div>
+</body></html>
