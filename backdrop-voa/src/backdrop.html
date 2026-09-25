@@ -22,7 +22,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
   background:radial-gradient(circle,rgba(255,255,255,.35) 2.5px,transparent 3px) 0 0/22px 22px}
 .streak{position:absolute;height:6px;border-radius:6px;transform:rotate(-24deg)}
 /* header */
-.top{position:absolute;left:70px;right:70px;top:46px;height:150px;display:flex;align-items:center;justify-content:space-between}
+.top{position:absolute;left:70px;right:70px;top:40px;height:140px;display:flex;align-items:center;justify-content:space-between}
 .welcome .k{font-size:26px;font-weight:700;letter-spacing:6px;color:#ffe066}
 .welcome h1{font-size:92px;line-height:1;font-weight:900;letter-spacing:2px;
   background:linear-gradient(90deg,#fff 0%,#ffe066 45%,#ff8ac2 100%);-webkit-background-clip:text;color:transparent;
@@ -33,7 +33,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 .tlqt img{height:112px;display:block}
 .tlqt small{display:block;font-size:14px;font-weight:700;letter-spacing:3px;color:#1b3a8f;margin-top:4px}
 /* cards */
-.cards{position:absolute;left:60px;right:60px;top:232px;bottom:124px;display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:30px}
+.cards{position:absolute;left:60px;right:60px;top:210px;bottom:96px;display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:30px}
 .card{position:relative;background:#fff;border-radius:34px;color:#10214a;overflow:hidden;
   box-shadow:0 24px 60px rgba(0,0,0,.4);display:flex;flex-direction:column;border:4px solid rgba(255,255,255,.9)}
 .head{height:112px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:22px 28px;background:#fff}
@@ -51,7 +51,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 .cx .robot{flex:1 1 0;height:0;min-height:0;max-width:100%;object-fit:contain;position:relative}
 /* allgens */
 .ag{--stage:linear-gradient(170deg,#0fb38a 0%,#0a7f86 55%,#0a4f7a 100%)}
-.ag .head .logo{height:80px}
+.ag .head .logo{height:66px}.ag .head .certs{height:28px}
 .prod{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:14px 18px;position:relative}
 .prod+.prod{border-top:2px solid rgba(255,255,255,.25)}
 .prod .chip img{height:52px}
@@ -59,20 +59,21 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 /* mantiz */
 .mz{--stage:linear-gradient(170deg,#e4ecff 0%,#efe6ff 100%)}
 .mz .stage::before{display:none}
-.mz .stage{padding:4px 24px 8px}
-.row{flex:1;display:grid;grid-template-columns:1fr 250px;align-items:center;column-gap:10px}
-.row+.row{border-top:2px solid #fff}
-.row .pl{height:50px;display:block;margin-bottom:10px}
-.row .pl.tall{height:58px}
-.row .txt{text-wrap:balance;font-size:27px;font-weight:800;color:#1d2b5c;line-height:1.2}
-.row .imgs{display:flex;justify-content:center;align-items:center;gap:10px;height:132px}
-.row .imgs img{max-height:100%;max-width:100%;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(40,30,110,.35))}
-.row .imgs.two img{max-width:48%;max-height:88%}
+.mz .stage.grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;padding:0}
+.cell{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px;text-align:center;min-height:0}
+.cell:nth-child(odd){border-right:2px solid #fff}.cell:nth-child(-n+2){border-bottom:2px solid #fff}
+.cell .pl{height:44px}.cell .pl.tall{height:54px}
+.cell .imgs{display:flex;justify-content:center;align-items:center;gap:10px;height:130px;width:100%}
+.cell .imgs img{max-height:100%;max-width:100%;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(40,30,110,.35))}
+.cell .imgs img:first-child:nth-last-child(2),.cell .imgs img:nth-child(2){max-width:47%}
+.cell .txt{font-size:26px;font-weight:800;color:#1d2b5c;line-height:1.2}
+.ag .head{justify-content:flex-start;gap:12px;padding:22px 22px}.ag .head .certs{margin-left:auto}
+.sub{font-size:18px;font-weight:700;color:#0a7f86;border-left:3px solid #16c47f;padding-left:12px;line-height:1.2;white-space:nowrap}
 /* footer */
-.foot{position:absolute;left:0;right:0;bottom:0;height:100px;display:flex;align-items:center;justify-content:center;gap:40px;
-  background:linear-gradient(90deg,rgba(255,61,110,.95),rgba(138,44,255,.95),rgba(30,107,255,.95))}
-.foot .l{font-size:28px;font-weight:700;letter-spacing:3px;color:#ffe9a8}
-.foot .p{font-size:52px;font-weight:900;letter-spacing:3px}
+.foot{position:absolute;left:0;right:0;bottom:0;height:64px;display:flex;align-items:center;justify-content:center;gap:22px;
+  background:rgba(10,6,40,.55);border-top:1px solid rgba(255,255,255,.18)}
+.foot .l{font-size:20px;font-weight:700;letter-spacing:3px;color:#ffe9a8}
+.foot .p{font-size:34px;font-weight:800;letter-spacing:2px}
 .foot .sep{width:3px;height:48px;background:rgba(255,255,255,.5)}
 .foot .s{font-size:26px;font-weight:600}
 </style></head><body>
@@ -80,18 +81,12 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
   <div class="ring" style="width:520px;height:520px;right:-160px;top:-200px"></div>
   <div class="ring" style="width:340px;height:340px;right:-60px;top:-110px;border-color:rgba(255,224,102,.35)"></div>
   <div class="ring" style="width:620px;height:620px;left:-280px;bottom:-330px;border-color:rgba(255,138,194,.35)"></div>
-  <div class="dots" style="left:620px;top:20px"></div>
-  <div class="dots" style="right:40px;bottom:120px;opacity:.6"></div>
-  <div class="streak" style="width:420px;left:900px;top:60px;background:linear-gradient(90deg,transparent,#ffe066)"></div>
-  <div class="streak" style="width:300px;left:1000px;top:110px;background:linear-gradient(90deg,transparent,#ff5fa8)"></div>
-  <div class="streak" style="width:240px;left:1080px;top:150px;background:linear-gradient(90deg,transparent,#5ff0ff)"></div>
 </div>
 
 <div class="top">
   <div class="welcome">
     <div class="k">CHÀO MỪNG QUÝ ĐẠI BIỂU THAM DỰ</div>
     <h1>HỘI NGHỊ VOA</h1>
-    <div class="t">Giải pháp toàn diện cho <b>Phẫu thuật Cột sống &amp; Chấn thương Chỉnh hình</b></div>
   </div>
   <div class="tlqt"><img src="img/39.png" alt="Thăng Long Quốc Tế"><small>NHÀ PHÂN PHỐI</small></div>
 </div>
@@ -107,20 +102,17 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
   </div>
 
   <div class="card ag">
-    <div class="head"><img class="logo" src="img/35.png" alt="Allgens"><img class="certs" src="img/44.png" alt="FDA ISO"></div>
+    <div class="head"><img class="logo" src="img/35.png" alt="Allgens"><span class="sub">Xương nhân tạo</span><img class="certs" src="img/44.png" alt="FDA ISO"></div>
     <div class="stage">
-      <div class="prod"><span class="chip"><img src="img/23.png" alt="BonGold"></span><img class="pi shadow" src="img/40.png" alt=""><span class="lbl">Xương nhân tạo · Chỉnh hình</span></div>
-      <div class="prod"><span class="chip"><img src="img/34.png" alt="Skulheal"></span><img class="pi shadow" src="img/36.png" alt=""><span class="lbl">Xương nhân tạo · Thần kinh</span></div>
+      <div class="prod"><span class="chip"><img src="img/23.png" alt="BonGold"></span><img class="pi shadow" src="img/40.png" alt=""><span class="lbl">Chấn thương chỉnh hình</span></div>
+      <div class="prod"><span class="chip"><img src="img/34.png" alt="Skulheal"></span><img class="pi shadow" src="img/36.png" alt=""><span class="lbl">Ngoại thần kinh</span></div>
     </div>
   </div>
 
   <div class="card mz">
     <div class="head"><img class="logo" src="img/19.png" alt="Mantiz"><img class="certs" src="img/41.png" alt="ISO GMP" style="height:62px;filter:none"></div>
-    <div class="stage">
-      <div class="row"><div><img class="pl tall" src="img/24.png" alt="Panther"><div class="txt">Lồng cột sống thắt lưng in 3D</div></div><div class="imgs two"><img src="img/25.png"><img src="img/26.png"></div></div>
-      <div class="row"><div><img class="pl tall" src="img/27.png" alt="Petra"><div class="txt">Lồng cột sống cổ in 3D</div></div><div class="imgs two"><img src="img/28.png"><img src="img/29.png"></div></div>
-      <div class="row"><div><img class="pl" src="img/30.png" alt="Quattro"><div class="txt">Vít cuống sống</div></div><div class="imgs"><img src="img/31.png"></div></div>
-      <div class="row"><div><img class="pl tall" src="img/32.png" alt="Gadget"><div class="txt">Vít qua da xâm lấn tối thiểu</div></div><div class="imgs"><img src="img/33.png"></div></div>
+    <div class="stage grid">
+      <div class="cell"><img class="pl tall" src="img/24.png"><div class="imgs"><img src="img/25.png"><img src="img/26.png"></div><div class="txt">Lồng thắt lưng in 3D</div></div><div class="cell"><img class="pl tall" src="img/27.png"><div class="imgs"><img src="img/28.png"><img src="img/29.png"></div><div class="txt">Lồng cổ in 3D</div></div><div class="cell"><img class="pl" src="img/30.png"><div class="imgs"><img src="img/31.png"></div><div class="txt">Vít cuống sống</div></div><div class="cell"><img class="pl tall" src="img/32.png"><div class="imgs"><img src="img/33.png"></div><div class="txt">Vít qua da ít xâm lấn</div></div>
     </div>
   </div>
 </div>
