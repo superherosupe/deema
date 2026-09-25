@@ -108,6 +108,24 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 .cell .pl{height:36px}.cell .pl.tall{height:44px}
 .cell .imgs{height:104px}
 .cell .txt{font-size:21px;text-wrap:balance}
+
+/* ===== v8 ===== */
+.cards{grid-template-columns:400px 1fr 400px}
+.ag .cap{font-size:24px;letter-spacing:5px;padding-top:16px}
+.tag{position:relative;text-align:center;color:#fff;font-size:22px;font-weight:600;font-style:italic;opacity:.92;margin-top:4px}
+.ag .prod .pi{max-height:200px}
+.stats{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:0 22px 20px}
+.st{background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.35);border-radius:18px;padding:12px 8px;text-align:center;color:#fff}
+.st b{display:block;font-size:32px;font-weight:900;color:#ffe066;line-height:1.1}
+.st span{display:block;font-size:17px;font-weight:600;margin-top:4px;color:#e6fff8}
+.mz .stage.mlist{display:flex;flex-direction:column;justify-content:center;padding:10px 26px;gap:0}
+.mi{padding:20px 0;border-bottom:2px solid #fff;display:flex;flex-direction:column;gap:4px}
+.mi:last-child{border-bottom:0}
+.mi b{font-size:26px;font-weight:900;color:#2f3fb0;letter-spacing:1px}
+.mi span{font-size:22px;font-weight:600;color:#1d2b5c}
+.mz .head .logo{height:42px}.mz .certs-row{gap:10px}.mz .certs-row .bd{height:52px}
+.mcap{font-size:20px;font-weight:800;letter-spacing:5px;color:#6a55d8;padding-bottom:6px}
+.mi{padding:24px 0}
 </style></head><body>
 <div class="bg">
   <div class="ring" style="width:520px;height:520px;right:-160px;top:-200px"></div>
@@ -136,17 +154,22 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
   <div class="card ag">
     <div class="head"><img class="logo" src="img/35.png" alt="Allgens"><div class="certs-row"><img class="wm" src="img/c_fda.png" alt="FDA"><img class="wm" src="img/c_iso.png" alt="ISO"></div></div>
     <div class="stage">
-      <div class="cap">XƯƠNG NHÂN TẠO</div>
+      <div class="cap">XƯƠNG NHÂN TẠO COLLAGEN KHOÁNG HÓA</div><div class="tag">Mô phỏng cấu trúc nano của xương tự nhiên</div>
       <div class="prod"><span class="chip"><img src="img/23.png" alt="BonGold"></span><img class="pi shadow" src="img/40.png" alt=""><span class="lbl">Chấn thương<br>chỉnh hình</span></div>
       <div class="prod flip"><span class="chip"><img src="img/34.png" alt="Skulheal"></span><img class="pi shadow" src="img/36.png" alt=""><span class="lbl">Ngoại thần kinh</span></div>
+    
+      <div class="stats">
+        <div class="st"><b>45 : 55</b><span>Collagen I : nano-HA</span></div>
+        <div class="st"><b>70–80%</b><span>Độ xốp</span></div>
+        <div class="st"><b>&gt;200.000</b><span>Ca lâm sàng</span></div>
+        <div class="st"><b>510(k)</b><span>FDA</span></div>
+      </div>
     </div>
   </div>
 
   <div class="card mz">
     <div class="head"><img class="logo" src="img/19.png" alt="Mantiz"><div class="certs-row"><img class="bd" src="img/c_iso13485.png" alt="ISO 13485:2016"><img class="bd" src="img/c_gmp.png" alt="GMP"></div></div>
-    <div class="stage grid">
-      <div class="cell"><img class="pl tall" src="img/24.png"><div class="imgs"><img src="img/25.png"><img src="img/26.png"></div><div class="txt">Lồng thắt lưng in 3D</div></div><div class="cell"><img class="pl tall" src="img/27.png"><div class="imgs"><img src="img/28.png"><img src="img/29.png"></div><div class="txt">Lồng cổ in 3D</div></div><div class="cell"><img class="pl" src="img/30.png"><div class="imgs"><img src="img/31.png"></div><div class="txt">Vít cuống sống</div></div><div class="cell"><img class="pl tall" src="img/32.png"><div class="imgs"><img src="img/33.png"></div><div class="txt">Vít qua da ít xâm lấn</div></div>
-    </div>
+    <div class="stage mlist"><div class="mcap">HỆ THỐNG CỘT SỐNG</div><div class="mi"><b>PANTHER</b><span>Lồng cột sống thắt lưng in 3D</span></div><div class="mi"><b>PETRA</b><span>Lồng cột sống cổ in 3D</span></div><div class="mi"><b>QUATTRO</b><span>Vít cuống sống</span></div><div class="mi"><b>QUATTRO GADGET</b><span>Vít qua da ít xâm lấn</span></div></div>
   </div>
 </div>
 
