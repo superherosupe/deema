@@ -51,7 +51,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 .cx .robot{flex:1 1 0;height:0;min-height:0;max-width:100%;object-fit:contain;position:relative}
 /* allgens */
 .ag{--stage:linear-gradient(170deg,#0fb38a 0%,#0a7f86 55%,#0a4f7a 100%)}
-.ag .head .logo{height:74px}.ag .head .certs{height:28px}
+.ag .head .logo{height:76px}.ag .head .certs{height:28px}
 .prod{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:14px 18px;position:relative}
 .prod+.prod{border-top:2px solid rgba(255,255,255,.25)}
 .prod .chip img{height:52px}
@@ -69,9 +69,10 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 .cell .txt{font-size:26px;font-weight:800;color:#1d2b5c;line-height:1.2}
 .ag .head{justify-content:flex-start;gap:12px;padding:22px 22px}.ag .head .certs{margin-left:auto}
 .cap{position:relative;text-align:center;padding-top:14px;font-size:20px;font-weight:800;letter-spacing:5px;color:#c9fff0}
-.seals{display:flex;gap:6px;margin-left:auto;flex:none}
-.seal{width:86px;height:86px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.25));font-family:'Be Vietnam Pro',sans-serif}
-.seal:nth-child(1){transform:rotate(-8deg)}.seal:nth-child(2){transform:rotate(6deg)}
+.certline{margin-left:auto;display:flex;align-items:center;gap:12px;flex:none;
+  font-size:17px;font-weight:700;letter-spacing:1.5px;color:#4b5878}
+.certline i{width:1.5px;height:20px;background:#c3cad9}
+.cemark{height:19px;filter:brightness(0) invert(34%) sepia(12%) saturate(900%) hue-rotate(185deg)}
 /* footer */
 .foot{position:absolute;left:0;right:0;bottom:0;height:64px;display:flex;align-items:center;justify-content:center;gap:22px;
   background:rgba(10,6,40,.55);border-top:1px solid rgba(255,255,255,.18)}
@@ -96,23 +97,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 
 <div class="cards">
   <div class="card cx">
-    <div class="head"><img class="logo" src="img/43.png" alt="Curexo"><div class="seals"><svg class="seal" viewBox="0 0 100 100"><defs>
-<linearGradient id="ga" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe9a0"/><stop offset=".5" stop-color="#e6b54a"/><stop offset="1" stop-color="#b8862a"/></linearGradient>
-<path id="pa" d="M50,50 m-39.5,0 a39.5,39.5 0 1,1 79,0 a39.5,39.5 0 1,1 -79,0"/></defs>
-<polygon points="50.00,1.00 55.04,5.28 60.90,2.23 64.86,7.53 71.26,5.85 73.94,11.90 80.55,11.69 81.82,18.18 88.31,19.45 88.10,26.06 94.15,28.74 92.47,35.14 97.77,39.10 94.72,44.96 99.00,50.00 94.72,55.04 97.77,60.90 92.47,64.86 94.15,71.26 88.10,73.94 88.31,80.55 81.82,81.82 80.55,88.31 73.94,88.10 71.26,94.15 64.86,92.47 60.90,97.77 55.04,94.72 50.00,99.00 44.96,94.72 39.10,97.77 35.14,92.47 28.74,94.15 26.06,88.10 19.45,88.31 18.18,81.82 11.69,80.55 11.90,73.94 5.85,71.26 7.53,64.86 2.23,60.90 5.28,55.04 1.00,50.00 5.28,44.96 2.23,39.10 7.53,35.14 5.85,28.74 11.90,26.06 11.69,19.45 18.18,18.18 19.45,11.69 26.06,11.90 28.74,5.85 35.14,7.53 39.10,2.23 44.96,5.28" fill="url(#ga)"/>
-<circle cx="50" cy="50" r="45.5" fill="none" stroke="#8a5f14" stroke-width=".7"/>
-<text font-size="6" font-weight="800" fill="#4a3208"><textPath href="#pa" textLength="248" lengthAdjust="spacing">★ CERTIFIED ★ CHỨNG NHẬN ★ CERTIFIED ★ CHỨNG NHẬN</textPath></text>
-<circle cx="50" cy="50" r="34" fill="#12245e"/>
-<circle cx="50" cy="50" r="31" fill="none" stroke="#f7d774" stroke-width=".9" stroke-dasharray="2 1.6"/>
-<image href="img/ce.png" x="33" y="40" width="34" height="25"/></svg><svg class="seal" viewBox="0 0 100 100"><defs>
-<linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe9a0"/><stop offset=".5" stop-color="#e6b54a"/><stop offset="1" stop-color="#b8862a"/></linearGradient>
-<path id="pb" d="M50,50 m-39.5,0 a39.5,39.5 0 1,1 79,0 a39.5,39.5 0 1,1 -79,0"/></defs>
-<polygon points="50.00,1.00 55.04,5.28 60.90,2.23 64.86,7.53 71.26,5.85 73.94,11.90 80.55,11.69 81.82,18.18 88.31,19.45 88.10,26.06 94.15,28.74 92.47,35.14 97.77,39.10 94.72,44.96 99.00,50.00 94.72,55.04 97.77,60.90 92.47,64.86 94.15,71.26 88.10,73.94 88.31,80.55 81.82,81.82 80.55,88.31 73.94,88.10 71.26,94.15 64.86,92.47 60.90,97.77 55.04,94.72 50.00,99.00 44.96,94.72 39.10,97.77 35.14,92.47 28.74,94.15 26.06,88.10 19.45,88.31 18.18,81.82 11.69,80.55 11.90,73.94 5.85,71.26 7.53,64.86 2.23,60.90 5.28,55.04 1.00,50.00 5.28,44.96 2.23,39.10 7.53,35.14 5.85,28.74 11.90,26.06 11.69,19.45 18.18,18.18 19.45,11.69 26.06,11.90 28.74,5.85 35.14,7.53 39.10,2.23 44.96,5.28" fill="url(#gb)"/>
-<circle cx="50" cy="50" r="45.5" fill="none" stroke="#8a5f14" stroke-width=".7"/>
-<text font-size="6" font-weight="800" fill="#4a3208"><textPath href="#pb" textLength="248" lengthAdjust="spacing">★ CERTIFIED ★ CHỨNG NHẬN ★ CERTIFIED ★ CHỨNG NHẬN</textPath></text>
-<circle cx="50" cy="50" r="34" fill="#12245e"/>
-<circle cx="50" cy="50" r="31" fill="none" stroke="#f7d774" stroke-width=".9" stroke-dasharray="2 1.6"/>
-<text x="50" y="63.4" text-anchor="middle" font-size="24" font-weight="900" fill="#fff" letter-spacing=".5">FDA</text></svg></div></div>
+    <div class="head"><img class="logo" src="img/43.png" alt="Curexo"><div class="certline"><img class="cemark" src="img/ce.png" alt="CE"><i></i><span>FDA</span></div></div>
     <div class="stage">
       <span class="chip"><img src="img/38.png" alt="CUVIS Spine"></span>
       <span class="lbl">Robot định vị phẫu thuật cột sống</span>
@@ -121,23 +106,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
   </div>
 
   <div class="card ag">
-    <div class="head"><img class="logo" src="img/35.png" alt="Allgens"><div class="seals"><svg class="seal" viewBox="0 0 100 100"><defs>
-<linearGradient id="gc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe9a0"/><stop offset=".5" stop-color="#e6b54a"/><stop offset="1" stop-color="#b8862a"/></linearGradient>
-<path id="pc" d="M50,50 m-39.5,0 a39.5,39.5 0 1,1 79,0 a39.5,39.5 0 1,1 -79,0"/></defs>
-<polygon points="50.00,1.00 55.04,5.28 60.90,2.23 64.86,7.53 71.26,5.85 73.94,11.90 80.55,11.69 81.82,18.18 88.31,19.45 88.10,26.06 94.15,28.74 92.47,35.14 97.77,39.10 94.72,44.96 99.00,50.00 94.72,55.04 97.77,60.90 92.47,64.86 94.15,71.26 88.10,73.94 88.31,80.55 81.82,81.82 80.55,88.31 73.94,88.10 71.26,94.15 64.86,92.47 60.90,97.77 55.04,94.72 50.00,99.00 44.96,94.72 39.10,97.77 35.14,92.47 28.74,94.15 26.06,88.10 19.45,88.31 18.18,81.82 11.69,80.55 11.90,73.94 5.85,71.26 7.53,64.86 2.23,60.90 5.28,55.04 1.00,50.00 5.28,44.96 2.23,39.10 7.53,35.14 5.85,28.74 11.90,26.06 11.69,19.45 18.18,18.18 19.45,11.69 26.06,11.90 28.74,5.85 35.14,7.53 39.10,2.23 44.96,5.28" fill="url(#gc)"/>
-<circle cx="50" cy="50" r="45.5" fill="none" stroke="#8a5f14" stroke-width=".7"/>
-<text font-size="6" font-weight="800" fill="#4a3208"><textPath href="#pc" textLength="248" lengthAdjust="spacing">★ CERTIFIED ★ CHỨNG NHẬN ★ CERTIFIED ★ CHỨNG NHẬN</textPath></text>
-<circle cx="50" cy="50" r="34" fill="#12245e"/>
-<circle cx="50" cy="50" r="31" fill="none" stroke="#f7d774" stroke-width=".9" stroke-dasharray="2 1.6"/>
-<text x="50" y="63.4" text-anchor="middle" font-size="24" font-weight="900" fill="#fff" letter-spacing=".5">FDA</text></svg><svg class="seal" viewBox="0 0 100 100"><defs>
-<linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe9a0"/><stop offset=".5" stop-color="#e6b54a"/><stop offset="1" stop-color="#b8862a"/></linearGradient>
-<path id="pd" d="M50,50 m-39.5,0 a39.5,39.5 0 1,1 79,0 a39.5,39.5 0 1,1 -79,0"/></defs>
-<polygon points="50.00,1.00 55.04,5.28 60.90,2.23 64.86,7.53 71.26,5.85 73.94,11.90 80.55,11.69 81.82,18.18 88.31,19.45 88.10,26.06 94.15,28.74 92.47,35.14 97.77,39.10 94.72,44.96 99.00,50.00 94.72,55.04 97.77,60.90 92.47,64.86 94.15,71.26 88.10,73.94 88.31,80.55 81.82,81.82 80.55,88.31 73.94,88.10 71.26,94.15 64.86,92.47 60.90,97.77 55.04,94.72 50.00,99.00 44.96,94.72 39.10,97.77 35.14,92.47 28.74,94.15 26.06,88.10 19.45,88.31 18.18,81.82 11.69,80.55 11.90,73.94 5.85,71.26 7.53,64.86 2.23,60.90 5.28,55.04 1.00,50.00 5.28,44.96 2.23,39.10 7.53,35.14 5.85,28.74 11.90,26.06 11.69,19.45 18.18,18.18 19.45,11.69 26.06,11.90 28.74,5.85 35.14,7.53 39.10,2.23 44.96,5.28" fill="url(#gd)"/>
-<circle cx="50" cy="50" r="45.5" fill="none" stroke="#8a5f14" stroke-width=".7"/>
-<text font-size="6" font-weight="800" fill="#4a3208"><textPath href="#pd" textLength="248" lengthAdjust="spacing">★ CERTIFIED ★ CHỨNG NHẬN ★ CERTIFIED ★ CHỨNG NHẬN</textPath></text>
-<circle cx="50" cy="50" r="34" fill="#12245e"/>
-<circle cx="50" cy="50" r="31" fill="none" stroke="#f7d774" stroke-width=".9" stroke-dasharray="2 1.6"/>
-<text x="50" y="63.4" text-anchor="middle" font-size="24" font-weight="900" fill="#fff" letter-spacing=".5">ISO</text></svg></div></div>
+    <div class="head"><img class="logo" src="img/35.png" alt="Allgens"><div class="certline"><span>FDA</span><i></i><span>ISO</span></div></div>
     <div class="stage">
       <div class="cap">XƯƠNG NHÂN TẠO</div>
       <div class="prod"><span class="chip"><img src="img/23.png" alt="BonGold"></span><img class="pi shadow" src="img/40.png" alt=""><span class="lbl">Chấn thương chỉnh hình</span></div>
@@ -146,23 +115,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
   </div>
 
   <div class="card mz">
-    <div class="head"><img class="logo" src="img/19.png" alt="Mantiz"><div class="seals"><svg class="seal" viewBox="0 0 100 100"><defs>
-<linearGradient id="ge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe9a0"/><stop offset=".5" stop-color="#e6b54a"/><stop offset="1" stop-color="#b8862a"/></linearGradient>
-<path id="pe" d="M50,50 m-39.5,0 a39.5,39.5 0 1,1 79,0 a39.5,39.5 0 1,1 -79,0"/></defs>
-<polygon points="50.00,1.00 55.04,5.28 60.90,2.23 64.86,7.53 71.26,5.85 73.94,11.90 80.55,11.69 81.82,18.18 88.31,19.45 88.10,26.06 94.15,28.74 92.47,35.14 97.77,39.10 94.72,44.96 99.00,50.00 94.72,55.04 97.77,60.90 92.47,64.86 94.15,71.26 88.10,73.94 88.31,80.55 81.82,81.82 80.55,88.31 73.94,88.10 71.26,94.15 64.86,92.47 60.90,97.77 55.04,94.72 50.00,99.00 44.96,94.72 39.10,97.77 35.14,92.47 28.74,94.15 26.06,88.10 19.45,88.31 18.18,81.82 11.69,80.55 11.90,73.94 5.85,71.26 7.53,64.86 2.23,60.90 5.28,55.04 1.00,50.00 5.28,44.96 2.23,39.10 7.53,35.14 5.85,28.74 11.90,26.06 11.69,19.45 18.18,18.18 19.45,11.69 26.06,11.90 28.74,5.85 35.14,7.53 39.10,2.23 44.96,5.28" fill="url(#ge)"/>
-<circle cx="50" cy="50" r="45.5" fill="none" stroke="#8a5f14" stroke-width=".7"/>
-<text font-size="6" font-weight="800" fill="#4a3208"><textPath href="#pe" textLength="248" lengthAdjust="spacing">★ CERTIFIED ★ CHỨNG NHẬN ★ CERTIFIED ★ CHỨNG NHẬN</textPath></text>
-<circle cx="50" cy="50" r="34" fill="#12245e"/>
-<circle cx="50" cy="50" r="31" fill="none" stroke="#f7d774" stroke-width=".9" stroke-dasharray="2 1.6"/>
-<text x="50" y="55" text-anchor="middle" font-size="22" font-weight="900" fill="#fff" letter-spacing=".5">ISO</text><text x="50" y="67" text-anchor="middle" font-size="8.2" font-weight="800" fill="#f7d774" letter-spacing=".3">13485:2016</text></svg><svg class="seal" viewBox="0 0 100 100"><defs>
-<linearGradient id="gf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe9a0"/><stop offset=".5" stop-color="#e6b54a"/><stop offset="1" stop-color="#b8862a"/></linearGradient>
-<path id="pf" d="M50,50 m-39.5,0 a39.5,39.5 0 1,1 79,0 a39.5,39.5 0 1,1 -79,0"/></defs>
-<polygon points="50.00,1.00 55.04,5.28 60.90,2.23 64.86,7.53 71.26,5.85 73.94,11.90 80.55,11.69 81.82,18.18 88.31,19.45 88.10,26.06 94.15,28.74 92.47,35.14 97.77,39.10 94.72,44.96 99.00,50.00 94.72,55.04 97.77,60.90 92.47,64.86 94.15,71.26 88.10,73.94 88.31,80.55 81.82,81.82 80.55,88.31 73.94,88.10 71.26,94.15 64.86,92.47 60.90,97.77 55.04,94.72 50.00,99.00 44.96,94.72 39.10,97.77 35.14,92.47 28.74,94.15 26.06,88.10 19.45,88.31 18.18,81.82 11.69,80.55 11.90,73.94 5.85,71.26 7.53,64.86 2.23,60.90 5.28,55.04 1.00,50.00 5.28,44.96 2.23,39.10 7.53,35.14 5.85,28.74 11.90,26.06 11.69,19.45 18.18,18.18 19.45,11.69 26.06,11.90 28.74,5.85 35.14,7.53 39.10,2.23 44.96,5.28" fill="url(#gf)"/>
-<circle cx="50" cy="50" r="45.5" fill="none" stroke="#8a5f14" stroke-width=".7"/>
-<text font-size="6" font-weight="800" fill="#4a3208"><textPath href="#pf" textLength="248" lengthAdjust="spacing">★ CERTIFIED ★ CHỨNG NHẬN ★ CERTIFIED ★ CHỨNG NHẬN</textPath></text>
-<circle cx="50" cy="50" r="34" fill="#12245e"/>
-<circle cx="50" cy="50" r="31" fill="none" stroke="#f7d774" stroke-width=".9" stroke-dasharray="2 1.6"/>
-<text x="50" y="63.4" text-anchor="middle" font-size="24" font-weight="900" fill="#fff" letter-spacing=".5">GMP</text></svg></div></div>
+    <div class="head"><img class="logo" src="img/19.png" alt="Mantiz"><div class="certline"><span>ISO 13485:2016</span><i></i><span>GMP</span></div></div>
     <div class="stage grid">
       <div class="cell"><img class="pl tall" src="img/24.png"><div class="imgs"><img src="img/25.png"><img src="img/26.png"></div><div class="txt">Lồng thắt lưng in 3D</div></div><div class="cell"><img class="pl tall" src="img/27.png"><div class="imgs"><img src="img/28.png"><img src="img/29.png"></div><div class="txt">Lồng cổ in 3D</div></div><div class="cell"><img class="pl" src="img/30.png"><div class="imgs"><img src="img/31.png"></div><div class="txt">Vít cuống sống</div></div><div class="cell"><img class="pl tall" src="img/32.png"><div class="imgs"><img src="img/33.png"></div><div class="txt">Vít qua da ít xâm lấn</div></div>
     </div>
