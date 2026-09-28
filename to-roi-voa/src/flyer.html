@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"><title>To roi VOA - Thang Long Quoc Te</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+/* A4 portrait at 96dpi = 794 x 1123 px ; 1px = 0.2646 mm */
+@page{size:210mm 297mm;margin:0}
+:root{--navy:#061a3f;--green:#8ed14f;--cyan:#5fd4ff;--ice:#cfe6ff;--ink:#0a2350}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.page{position:relative;width:794px;height:1123px;overflow:hidden;page-break-after:always;
+  background:
+   radial-gradient(520px 380px at 0% 0%,rgba(46,140,255,.45),transparent 65%),
+   radial-gradient(520px 420px at 100% 100%,rgba(120,200,80,.20),transparent 65%),
+   linear-gradient(165deg,#0b2d68 0%,#071d47 55%,#04122e 100%)}
+.page::before{content:"";position:absolute;inset:-20%;background:repeating-linear-gradient(115deg,rgba(255,255,255,.045) 0 1.5px,transparent 1.5px 34px);pointer-events:none}
+.ring{position:absolute;border-radius:50%;border:1.5px solid rgba(160,210,255,.16)}
+.pad{position:absolute;inset:0;padding:34px 40px 0}
+
+/* header */
+.brand{display:flex;align-items:center;gap:16px}
+.emb{width:78px;height:78px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:0 6px 18px rgba(0,0,0,.35),0 0 0 3px rgba(142,209,79,.35)}
+.emb img{width:62px}
+.bname{font-size:23px;font-weight:900;letter-spacing:.5px;line-height:1.1;white-space:nowrap}
+.bname b{color:var(--green)}
+.bval{font-size:16px;font-weight:700;font-style:italic;color:var(--ice);margin-top:4px}
+
+/* shared */
+.chk{display:inline-flex;width:22px;height:22px;border-radius:50%;background:var(--green);align-items:center;justify-content:center;flex:none}
+.chk::after{content:"";width:9px;height:5px;border-left:2.6px solid #0a3170;border-bottom:2.6px solid #0a3170;transform:translateY(-1px) rotate(-45deg)}
+.chip{background:#fff;border-radius:12px;padding:6px 12px;display:inline-flex;align-items:center;box-shadow:0 5px 14px rgba(0,0,0,.28)}
+.card{background:linear-gradient(170deg,rgba(21,85,159,.9),rgba(10,49,112,.9));border:1.5px solid rgba(160,210,255,.35);border-radius:18px}
+.shadow{filter:drop-shadow(0 10px 12px rgba(0,0,0,.45))}
+.kicker{font-size:13px;font-weight:800;letter-spacing:3px;color:var(--ice)}
+
+/* ===== FRONT ===== */
+.f-head{display:flex;align-items:center;justify-content:space-between;margin-top:30px;background:#fff;border-radius:16px;padding:12px 18px}
+.f-head .lg{height:54px}.f-head .cr{display:flex;gap:10px;align-items:center}.f-head .cr img{height:28px}
+.f-title{margin-top:20px;text-align:center}
+.f-title .k{font-size:14.5px;font-weight:800;letter-spacing:2.2px;color:var(--ice)}
+.f-title h1{font-size:34px;font-weight:900;line-height:1.15;margin-top:6px}
+.f-title h1 b{color:var(--green)}
+.f-sl{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:14px}
+.f-sl .s{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800}
+.f-sl .s b{color:var(--green)}
+.f-prods{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.fp{padding:14px 14px 16px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.fp .chip img{height:32px}
+.fp .ph{height:150px;width:100%;display:flex;align-items:center;justify-content:center;margin:8px 0 4px;
+  background:radial-gradient(ellipse 55% 45% at 50% 60%,rgba(255,255,255,.26),transparent 72%)}
+.fp .ph img{max-width:100%;max-height:120px}
+.fp .ap{font-size:17px;font-weight:800;color:var(--green)}
+.fp .ds{font-size:13px;font-weight:600;color:var(--ice);margin-top:4px;line-height:1.4}
+.f-stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:16px;padding:12px 4px}
+.f-stats .st{text-align:center}.f-stats .st+.st{border-left:1.5px solid rgba(255,255,255,.22)}
+.f-stats b{display:block;font-size:22px;font-weight:900;color:var(--green);line-height:1.1}
+.f-stats span{display:block;font-size:11.5px;font-weight:600;color:var(--ice);margin-top:3px}
+.f-adv{margin-top:16px}
+.f-adv .h{font-size:14px;font-weight:900;letter-spacing:2px;color:var(--green);margin-bottom:8px}
+.f-adv ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px}
+.f-adv li{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;font-weight:600;line-height:1.35}
+.f-adv li .chk{width:18px;height:18px;margin-top:1px}.f-adv li .chk::after{width:7px;height:4px;border-width:0 0 2.2px 2.2px}
+.foot{position:absolute;left:0;right:0;bottom:0;height:62px;background:#fff;color:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 40px}
+.foot .hl{font-size:14px;font-weight:700}.foot .hl b{font-size:22px;font-weight:900;color:#0f4c9a;margin-left:6px}
+.foot .nx{font-size:13px;font-weight:800;color:#0f4c9a;letter-spacing:1px}
+
+/* ===== BACK ===== */
+.b-title{margin-top:24px;text-align:center}
+.b-title .k{font-size:13px;font-weight:800;letter-spacing:3px;color:var(--ice)}
+.b-title h1{font-size:30px;font-weight:900;line-height:1.15;margin-top:5px}
+.b-title h1 b{color:var(--green)}
+.b-robot{margin-top:14px;padding:12px 14px 12px}
+.b-robot .top{display:flex;align-items:center;justify-content:space-between}
+.b-robot .top .l{display:flex;align-items:center;gap:12px}
+.b-robot .top .lg{height:30px;background:#fff;border-radius:8px;padding:4px 8px;box-sizing:content-box}
+.b-robot .top .cr{height:22px;background:#fff;border-radius:6px;padding:4px 7px;box-sizing:content-box}
+.b-robot .top .chip img{height:26px}
+.rz{position:relative;height:330px;margin-top:4px}
+.rz .robot{position:absolute;height:318px;left:170px;bottom:0}
+.rz .floor{position:absolute;left:170px;width:348px;bottom:-16px;height:70px;background:radial-gradient(ellipse 50% 32% at 50% 60%,rgba(95,212,255,.35),transparent 70%)}
+.rz svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.bub{position:absolute;display:flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border-radius:30px;
+  background:rgba(6,26,63,.85);border:1.5px solid var(--cyan);box-shadow:0 0 12px rgba(95,212,255,.45)}
+.bub .ic{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),#2f8cff);display:flex;align-items:center;justify-content:center;flex:none;font-weight:900;font-size:12px;color:#04122e}
+.bub .tx{font-size:13.5px;font-weight:800;line-height:1.2;white-space:nowrap}
+.b-desc{font-size:13px;font-weight:600;color:var(--ice);line-height:1.45;margin-top:10px;text-align:center}
+.b-mz{margin-top:14px;padding:12px 14px 14px}
+.b-mz .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.b-mz .top .lg{height:28px;background:#fff;border-radius:8px;padding:5px 9px;box-sizing:content-box}
+.b-mz .top .cr{display:flex;gap:6px;background:#fff;border-radius:8px;padding:3px 8px}.b-mz .top .cr img{height:32px}
+.b-mz .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.mc{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px}
+.mc .pimg{width:100%;height:84px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;gap:2px;padding:6px;margin-bottom:3px}
+.mc .pimg img{max-width:100%;max-height:100%;object-fit:contain}.mc .pimg.two img{max-width:49%}
+.mc b{font-size:14.5px;font-weight:900;line-height:1.15}
+.mc span{font-size:11.5px;font-weight:600;color:var(--ice);line-height:1.3}
+.tag{display:inline-block;background:var(--green);color:#0a3170;font-weight:900;font-size:10.5px;letter-spacing:1px;padding:2px 8px;border-radius:10px}
+.b-3d{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:12.5px;font-weight:700;color:#fff}
+.b-contact{position:absolute;left:0;right:0;bottom:0;height:176px;background:#fff;color:var(--ink);padding:16px 40px;display:flex;align-items:center;justify-content:space-between}
+.b-contact .who{display:flex;flex-direction:column;gap:6px}
+.b-contact .who .n{font-size:15px;font-weight:900;color:#0f4c9a;line-height:1.2}
+.b-contact .who .n b{color:#4a9a2a}
+.b-contact .who .h{font-size:13px;font-weight:700;color:#4b5878;letter-spacing:1px}
+.b-contact .who .p{font-size:27px;font-weight:900;color:#0f4c9a}
+.b-contact .qrs{display:flex;gap:10px}
+.b-contact .qr{display:flex;flex-direction:column;align-items:center;gap:3px}
+.b-contact .qr img{width:84px;height:84px;display:block;border:1px solid #e1e6f0;border-radius:6px}
+.b-contact .qr span{font-size:11px;font-weight:800}
+
+/* fill vertical space */
+.f-title{margin-top:24px}.f-title h1{font-size:38px}
+.f-sl{margin-top:16px}.f-sl .s{font-size:21px}
+.f-prods{margin-top:24px}
+.fp .ph{height:210px}.fp .ph img{max-height:178px}
+.fp .chip img{height:36px}.fp .ap{font-size:18px}.fp .ds{font-size:13.5px}
+.f-stats{margin-top:20px;padding:14px 4px}.f-stats b{font-size:24px}
+.f-adv{margin-top:22px}
+.rz{height:392px}.rz .robot{height:380px;left:150px}.rz .floor{left:150px;width:416px}
+.b-robot{margin-top:16px}
+.b-mz{margin-top:16px}
+.mc .pimg{height:100px}
+.f-adv{margin-top:28px}.f-adv .h{font-size:15px;margin-bottom:12px}.f-adv ul{gap:14px 18px}.f-adv li{font-size:14.5px}
+.wb{background:#fff;border-radius:8px;padding:5px 9px;display:inline-flex;align-items:center;gap:8px}
+.foot .hl b{margin-left:0}
+</style></head><body>
+
+<!-- ================= FRONT ================= -->
+<div class="page" id="p1">
+  <div class="ring" style="width:420px;height:420px;right:-180px;top:-200px"></div>
+  <div class="pad">
+    <div class="brand">
+      <div class="emb"><img src="img/tl_emblem.png" alt="Logo Thăng Long Quốc Tế"></div>
+      <div><div class="bname t">DỊCH VỤ Y KHOA <b>THĂNG LONG QUỐC TẾ</b></div><div class="bval t">Kết nối công nghệ, Kiến tạo giá trị</div></div>
+    </div>
+
+    <div class="f-head"><img class="lg" src="img/35.png" alt="Allgens"><div class="cr"><img src="img/c_fda.png" alt="FDA"><img src="img/c_iso.png" alt="ISO"></div></div>
+
+    <div class="f-title">
+      <div class="k t">VẬT LIỆU XƯƠNG SINH HỌC</div>
+      <h1 class="t">COLLAGEN <b>KHOÁNG HÓA</b></h1>
+    </div>
+    <div class="f-sl">
+      <div class="s"><span class="chk"></span><span class="t">Đạt chứng nhận <b>FDA Hoa Kỳ</b></span></div>
+      <div class="s"><span class="chk"></span><span class="t">Tương đồng cao với <b>xương tự thân</b></span></div>
+    </div>
+
+    <div class="f-prods">
+      <div class="fp card">
+        <span class="chip"><img src="img/23.png" alt="BonGold"></span>
+        <div class="ph"><img class="shadow" src="img/40.png" alt=""></div>
+        <div class="ap t">Chấn thương chỉnh hình</div>
+        <div class="ds t">Lấp đầy khuyết xương, kết hợp<br>với mảnh ghép xương tự thân</div>
+      </div>
+      <div class="fp card">
+        <span class="chip"><img src="img/34.png" alt="Skulheal"></span>
+        <div class="ph"><img class="shadow" src="img/36.png" alt=""></div>
+        <div class="ap t">Ngoại thần kinh</div>
+        <div class="ds t">Tái tạo và phục hồi<br>khuyết xương sọ</div>
+      </div>
+    </div>
+
+    <div class="f-stats card">
+      <div class="st"><b class="t">45 : 55</b><span class="t">Collagen I : nano-HA</span></div>
+      <div class="st"><b class="t">70–80%</b><span class="t">Độ xốp</span></div>
+      <div class="st"><b class="t">200–400 µm</b><span class="t">Kích thước lỗ</span></div>
+      <div class="st"><b class="t">&gt;200.000</b><span class="t">Ca lâm sàng</span></div>
+    </div>
+
+    <div class="f-adv">
+      <div class="h t">ƯU ĐIỂM NỔI BẬT</div>
+      <ul>
+        <li><span class="chk"></span><span class="t">Mô phỏng cấu trúc nano của xương tự nhiên</span></li>
+        <li><span class="chk"></span><span class="t">Tiêu biến dần, được thay thế bằng xương mới</span></li>
+        <li><span class="chk"></span><span class="t">Dễ tạo hình, thao tác thuận tiện trong mổ</span></li>
+        <li><span class="chk"></span><span class="t">Công nghệ bản quyền từ Đại học Thanh Hoa</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span class="hl t">Hotline <b>0916 899 322</b></span><span class="nx t">GIẢI PHÁP CỘT SỐNG Ở MẶT SAU  →</span></div>
+</div>
+
+<!-- ================= BACK ================= -->
+<div class="page" id="p2">
+  <div class="ring" style="width:460px;height:460px;left:-220px;top:-230px"></div>
+  <div class="pad">
+    <div class="b-title">
+      <div class="k t">GIẢI PHÁP TÍCH HỢP CHO</div>
+      <h1 class="t">PHẪU THUẬT <b>CỘT SỐNG</b></h1>
+    </div>
+
+    <div class="b-robot card">
+      <div class="top">
+        <div class="l"><span class="wb"><img src="img/43.png" alt="Curexo" style="height:30px"></span><span class="wb"><img src="img/c_ce.png" alt="CE" style="height:22px"><img src="img/c_fda.png" alt="FDA" style="height:22px"></span></div>
+        <span class="chip"><img src="img/38.png" alt="CUVIS Spine"></span>
+      </div>
+      <div class="rz" id="rz">
+        <div class="floor"></div>
+        <img class="robot shadow" id="robot" src="img/37.png" alt="Robot CUVIS Spine">
+        <svg id="lines"></svg>
+        <div class="bub" id="b1" style="right:0;top:18px"><span class="ic t">01</span><span class="tx t">Giảm phơi nhiễm tia X</span></div>
+        <div class="bub" id="b2" style="right:0;top:110px"><span class="ic t">02</span><span class="tx t">Độ chính xác cao</span></div>
+        <div class="bub" id="b3" style="left:0;top:150px"><span class="ic t">03</span><span class="tx t">Tối ưu hóa<br>quy trình phẫu thuật</span></div>
+      </div>
+      <div class="b-desc t">Robot định vị và dẫn đường đặt vít cuống sống: cánh tay robot độ chính xác cao,<br>cảm biến theo dõi thời gian thực, dụng cụ phẫu thuật một bước.</div>
+    </div>
+
+    <div class="b-mz card">
+      <div class="top"><span class="wb"><img src="img/19.png" alt="Mantiz" style="height:28px"></span><div class="cr"><img src="img/c_iso13485.png" alt="ISO 13485"><img src="img/c_gmp.png" alt="GMP"></div></div>
+      <div class="grid">
+        <div class="mc"><div class="pimg two"><img src="img/25.png" alt=""><img src="img/26.png" alt=""></div><b class="t">PANTHER</b><span class="t">Lồng thắt lưng in 3D</span></div>
+        <div class="mc"><div class="pimg two"><img src="img/28.png" alt=""><img src="img/29.png" alt=""></div><b class="t">PETRA</b><span class="t">Lồng cổ in 3D</span></div>
+        <div class="mc"><div class="pimg"><img src="img/31.png" alt=""></div><b class="t">QUATTRO</b><span class="t">Vít cuống sống</span></div>
+        <div class="mc"><div class="pimg"><img src="img/33.png" alt=""></div><b class="t">QUATTRO GADGET</b><span class="t">Vít qua da ít xâm lấn</span></div>
+      </div>
+      <div class="b-3d"><span class="tag t">CÔNG NGHỆ IN 3D</span><span class="t">Cấu trúc xốp tối ưu hóa tích hợp xương</span><span class="tag t" style="margin-left:auto">MIS</span><span class="t">Phẫu thuật ít xâm lấn</span></div>
+    </div>
+  </div>
+
+  <div class="b-contact">
+    <div class="who">
+      <div class="n t">DỊCH VỤ Y KHOA<br><b>THĂNG LONG QUỐC TẾ</b></div>
+      <div class="h t">HOTLINE</div>
+      <div class="p t">0916 899 322</div>
+    </div>
+    <div class="qrs">
+      <div class="qr"><img src="img/qr_facebook.png" alt="QR Facebook"><span class="t">Facebook</span></div>
+      <div class="qr"><img src="img/qr_zalo.png" alt="QR Zalo"><span class="t">Zalo</span></div>
+      <div class="qr"><img src="img/qr_tiktok.png" alt="QR TikTok"><span class="t">TikTok</span></div>
+      <div class="qr"><img src="img/qr_instagram.png" alt="QR Instagram"><span class="t">Instagram</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const ANCHORS={b1:[255,52],b2:[640,190],b3:[150,300]};
+function draw(){
+  const rz=document.getElementById('rz'),img=document.getElementById('robot'),svg=document.getElementById('lines');
+  if(!img.complete||!img.naturalWidth) return;
+  const R=rz.getBoundingClientRect(),I=img.getBoundingClientRect(),s=I.height/img.naturalHeight;
+  let out='';
+  for(const [id,[ax,ay]] of Object.entries(ANCHORS)){
+    const B=document.getElementById(id).getBoundingClientRect();
+    const px=I.left-R.left+ax*s, py=I.top-R.top+ay*s;
+    const bl=B.left-R.left,br=B.right-R.left,bt=B.top-R.top,bb=B.bottom-R.top;
+    let pts;
+    if(px>bl+14&&px<br-14){ pts=`${px},${py} ${px},${py>bb?bb:bt}`; }
+    else{ const right=bl>px, ex=right?bl:br, ey=bt+(bb-bt)/2, mx=right?Math.max(px+16,ex-28):Math.min(px-16,ex+28); pts=`${px},${py} ${mx},${ey} ${ex},${ey}`; }
+    out+=`<polyline points="${pts}" fill="none" stroke="#5fd4ff" stroke-width="2" stroke-linejoin="round"/>`;
+    out+=`<circle cx="${px}" cy="${py}" r="9" fill="rgba(95,212,255,.25)"/><circle cx="${px}" cy="${py}" r="4.5" fill="#fff" stroke="#5fd4ff" stroke-width="2.2"/>`;
+  }
+  svg.innerHTML=out;
+}
+window.addEventListener('load',draw);document.fonts&&document.fonts.ready.then(draw);
+</script>
+</body></html>
