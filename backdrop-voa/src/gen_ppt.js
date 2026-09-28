@@ -1,7 +1,7 @@
 const pptxgen=require('pptxgenjs');const fs=require('fs');const path=require('path');
 const d=JSON.parse(fs.readFileSync('layout2.json'));
 const P=v=>v/144; // px -> inch (1920px = 13.333in)
-const pres=new pptxgen();pres.layout='LAYOUT_WIDE';pres.title='Backdrop VOA - Thăng Long Quốc Tế';
+const pres=new pptxgen();pres.defineLayout({name:'BD2x1',width:13.333,height:6.667});pres.layout='BD2x1';pres.title='Backdrop VOA - Thăng Long Quốc Tế';
 const s=pres.addSlide();
 s.background={path:'ppt_bg.png'};
 for(const i of d.imgs) s.addImage({path:i.src,x:P(i.x),y:P(i.y),w:P(i.w),h:P(i.h),altText:i.alt||path.basename(i.src)});

@@ -1,6 +1,6 @@
 const {chromium}=require('playwright');
 (async()=>{const b=await chromium.launch({executablePath:'/opt/pw-browsers/chromium'});
-const p=await b.newPage({viewport:{width:1920,height:1080},deviceScaleFactor:2});
+const p=await b.newPage({viewport:{width:1920,height:960},deviceScaleFactor:2});
 await p.goto('file://'+__dirname+'/backdrop.html',{waitUntil:'networkidle'});await p.evaluate(()=>document.fonts.ready);
 const data=await p.evaluate(()=>{
  const r=e=>{const b=e.getBoundingClientRect();return {x:b.x,y:b.y,w:b.width,h:b.height}};
