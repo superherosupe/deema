@@ -180,6 +180,32 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 /* ===== v16: robot anchored to bottom ===== */
 .rz .robot{height:505px;top:auto;bottom:4px;left:128px}
 .rz .floor{top:auto;bottom:-30px;left:128px;width:553px;height:110px}
+
+/* ===== v17: smaller robot, larger Allgens + Mantiz ===== */
+.main{grid-template-columns:830px 1fr}
+.sp .head.split{grid-template-columns:1fr 2px 410px}
+.sp .head.split .mzg .logo{height:40px}.sp .head.split .mzg .certs-row .bd{height:46px}
+.cols{grid-template-columns:1fr 2px 410px}
+.rcol .cap{font-size:22px;line-height:1.25;white-space:normal}
+.rz .robot{height:400px;left:112px}
+.rz .floor{left:112px;width:438px}
+.rz .chip img{height:36px}
+.bub{padding:7px 14px 7px 7px}.bub .ic{width:32px;height:32px;font-size:15px}.bub .tx{font-size:17px}
+/* Mantiz bigger */
+.implants{padding:16px 18px;gap:12px}
+.pimg{height:128px}
+.pc b{font-size:21px}.pc span{font-size:16px}
+.implants .grp3d .d{font-size:16.5px}
+.tag{font-size:16px}
+.pc .mis{font-size:14px}
+/* Allgens bigger */
+.ag .head .logo{height:72px}
+.ag .cap{font-size:22px}
+.slogan .s{font-size:33px}
+.prod{grid-template-columns:250px 1fr}.prod.flip{grid-template-columns:1fr 250px}
+.prod .chip img{height:46px}.prod .lbl{font-size:25px}
+.piw img{max-height:168px}
+.st b{font-size:30px}.st span{font-size:16px}
 </style></head><body>
 <div class="bg">
   <div class="ring" style="width:620px;height:620px;right:-220px;top:-260px"></div>
@@ -237,15 +263,15 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
     <div class="stage">
       <div class="cols">
         <div class="rcol">
-        <div class="cap t">GIẢI PHÁP TÍCH HỢP CHO <b>PHẪU THUẬT CỘT SỐNG</b></div>
+        <div class="cap t">GIẢI PHÁP TÍCH HỢP CHO<br><b>PHẪU THUẬT CỘT SỐNG</b></div>
         <div class="rz" id="rz">
           <span class="chip"><img src="img/38.png" alt="CUVIS Spine"></span>
           <div class="floor"></div>
           <img class="robot shadow" id="robot" src="img/37.png" alt="Robot CUVIS Spine">
           <svg id="lines"></svg>
-          <div class="bub" id="b1" style="left:250px;top:26px"><span class="ic t">01</span><span class="tx t">Giảm phơi nhiễm tia X</span></div>
-          <div class="bub" id="b2" style="right:6px;top:118px"><span class="ic t">02</span><span class="tx t">Độ chính xác cao</span></div>
-          <div class="bub" id="b3" style="left:0px;top:395px"><span class="ic t">03</span><span class="tx t">Tối ưu hóa<br>quy trình<br>phẫu thuật</span></div>
+          <div class="bub" id="b1" style="right:0px;top:92px"><span class="ic t">01</span><span class="tx t">Giảm phơi nhiễm tia X</span></div>
+          <div class="bub" id="b2" style="right:0px;top:176px"><span class="ic t">02</span><span class="tx t">Độ chính xác cao</span></div>
+          <div class="bub" id="b3" style="left:0px;top:250px"><span class="ic t">03</span><span class="tx t">Tối ưu hóa<br>quy trình<br>phẫu thuật</span></div>
         </div>
         </div>
         <div class="vdiv"></div>
