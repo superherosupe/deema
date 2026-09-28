@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"><title>Product sheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#8ed14f;--ice:#cfe6ff;--cyan:#5fd4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+body{background:radial-gradient(900px 700px at 0% 0%,rgba(46,140,255,.45),transparent 65%),radial-gradient(800px 700px at 100% 100%,rgba(120,200,80,.22),transparent 65%),linear-gradient(165deg,#0b2d68 0%,#071d47 55%,#04122e 100%);
+  display:flex;flex-direction:column;padding:70px 70px 0}
+.brand{display:flex;align-items:center;gap:26px}
+.emb{width:130px;height:130px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex:none}
+.emb img{width:104px}
+.bn{font-size:40px;font-weight:900;line-height:1.1}.bn b{color:var(--green)}
+.bv{font-size:28px;font-weight:700;font-style:italic;color:var(--ice);margin-top:6px}
+.maker{margin-top:60px;background:#fff;border-radius:26px;padding:22px 30px;display:flex;align-items:center;justify-content:space-between}
+.maker .lg{height:70px;max-width:520px;object-fit:contain}.maker .cr{display:flex;gap:14px;align-items:center}.maker .cr img{height:48px}.maker .cr img.bd{height:78px}
+.cat{margin-top:50px;font-size:30px;font-weight:800;letter-spacing:5px;color:var(--ice);text-align:center}
+.name{margin-top:18px;display:flex;justify-content:center}
+.name .chip{background:#fff;border-radius:22px;padding:14px 30px;display:flex;align-items:center}
+.name .chip img{height:86px}
+.name h1{font-size:96px;font-weight:900;letter-spacing:2px;line-height:1}
+.sub{text-align:center;font-size:44px;font-weight:800;color:var(--green);margin-top:22px}
+.photo{flex:none;height:600px;margin-top:30px;display:flex;align-items:center;justify-content:center;gap:30px;
+  background:radial-gradient(ellipse 55% 45% at 50% 58%,rgba(255,255,255,.28),transparent 72%)}
+.photo img{max-width:92%;max-height:520px;object-fit:contain;filter:drop-shadow(0 22px 26px rgba(0,0,0,.5))}
+.photo.two img{max-width:45%}
+.photo.white{background:none}.photo.white .box{background:#fff;border-radius:40px;width:100%;height:100%;display:flex;align-items:center;justify-content:center;gap:30px;padding:40px}
+.photo.white img{filter:none}
+.pts{margin-top:40px;display:flex;flex-direction:column;gap:22px}
+.pts li{list-style:none;display:flex;gap:20px;align-items:flex-start;font-size:36px;font-weight:700;line-height:1.3}
+.chk{flex:none;width:46px;height:46px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;margin-top:2px}
+.chk::after{content:"";width:18px;height:10px;border-left:5px solid #0a3170;border-bottom:5px solid #0a3170;transform:translateY(-3px) rotate(-45deg)}
+.foot{margin-top:auto;margin-left:-70px;margin-right:-70px;background:#fff;color:#0a2350;padding:34px 70px;display:flex;justify-content:space-between;align-items:center}
+.foot .k{font-size:26px;font-weight:800;letter-spacing:3px;color:#5b6b8e}
+.foot .p{font-size:56px;font-weight:900;color:#0f4c9a}
+.foot .r{text-align:right;font-size:26px;font-weight:700;color:#0f4c9a;line-height:1.4}
+.photo{height:720px}
+.photo img{width:94%;height:640px;max-width:none;max-height:none;object-fit:contain}
+.photo.two img{width:46%;height:520px}
+.photo.white .box{padding:50px}
+.photo.white img{height:100%}
+.pts li{font-size:38px}
+.photo:not(.white){height:560px}.photo:not(.white) img{height:520px}
+</style></head><body>
+<div class="brand"><div class="emb"><img src="img/tl_emblem.png"></div><div><div class="bn">DỊCH VỤ Y KHOA<br><b>THĂNG LONG QUỐC TẾ</b></div><div class="bv">Kết nối công nghệ, Kiến tạo giá trị</div></div></div>
+<div id="c"></div>
+<div class="foot"><div><div class="k">HOTLINE</div><div class="p">0916 899 322</div></div><div class="r">Facebook · Zalo<br>TikTok · Instagram</div></div>
+<script>
+const P={
+ bongold:{maker:'35.png',certs:['c_fda.png','c_iso.png'],cat:'XƯƠNG NHÂN TẠO COLLAGEN KHOÁNG HÓA',chip:'23.png',sub:'Chấn thương chỉnh hình',photo:['40.png'],
+   pts:['Đạt chứng nhận FDA Hoa Kỳ','Tương đồng cao với xương tự thân','Mô phỏng cấu trúc nano của xương tự nhiên','Collagen I : nano-HA = 45 : 55 · Độ xốp 70–80% · Lỗ 200–400 µm','Lấp đầy khuyết xương, kết hợp với mảnh ghép xương tự thân']},
+ skulheal:{maker:'35.png',certs:['c_fda.png','c_iso.png'],cat:'XƯƠNG NHÂN TẠO COLLAGEN KHOÁNG HÓA',chip:'34.png',sub:'Ngoại thần kinh',photo:['36.png'],
+   pts:['Vật liệu xương sinh học collagen khoáng hóa','Tương đồng cao với xương tự thân','Mô phỏng cấu trúc nano của xương tự nhiên','Tái tạo và phục hồi khuyết xương sọ']},
+ cuvis:{maker:'43.png',certs:['c_ce.png','c_fda.png'],cat:'ROBOT PHẪU THUẬT CỘT SỐNG',chip:'38.png',sub:'Giải pháp tích hợp cho phẫu thuật cột sống',photo:['37.png'],
+   pts:['Độ chính xác cao','Giảm phơi nhiễm tia X','Tối ưu hóa quy trình phẫu thuật','Định vị và dẫn đường đặt vít cuống sống: cánh tay robot, cảm biến theo dõi thời gian thực, dụng cụ một bước']},
+ panther:{maker:'19.png',certs:['c_iso13485.png','c_gmp.png'],bd:1,cat:'LỒNG CỘT SỐNG THẮT LƯNG IN 3D',name:'PANTHER',sub:'Công nghệ in 3D',photo:['25.png','26.png'],white:1,
+   pts:['Lồng hàn liên thân đốt sống thắt lưng in 3D','Cấu trúc xốp tối ưu hóa tích hợp xương']},
+ petra:{maker:'19.png',certs:['c_iso13485.png','c_gmp.png'],bd:1,cat:'LỒNG CỘT SỐNG CỔ IN 3D',name:'PETRA',sub:'Công nghệ in 3D',photo:['28.png','29.png'],white:1,
+   pts:['Lồng hàn liên thân đốt sống cổ in 3D','Cấu trúc xốp tối ưu hóa tích hợp xương']},
+ quattro:{maker:'19.png',certs:['c_iso13485.png','c_gmp.png'],bd:1,cat:'HỆ THỐNG VÍT CỘT SỐNG',name:'QUATTRO',sub:'Vít cuống sống',photo:['31.png'],white:1,
+   pts:['Hệ thống vít cố định cuống sống và thân đốt sống']},
+ gadget:{maker:'19.png',certs:['c_iso13485.png','c_gmp.png'],bd:1,cat:'HỆ THỐNG VÍT QUA DA',name:'QUATTRO GADGET',sub:'Phẫu thuật ít xâm lấn (MIS)',photo:['33.png'],white:1,
+   pts:['Hệ thống vít qua da xâm lấn tối thiểu','Phù hợp phẫu thuật cột sống ít xâm lấn (MIS)']},
+};
+const k=new URLSearchParams(location.search).get('p'), d=P[k];
+const img=f=>`<img src="img/${f}">`;
+document.getElementById('c').outerHTML=`
+<div class="maker">${img(d.maker).replace('<img','<img class="lg"')}<div class="cr">${d.certs.map(c=>d.bd&&c.includes('13485')||c.includes('gmp')?`<img class="bd" src="img/${c}">`:img(c)).join('')}</div></div>
+<div class="cat">${d.cat}</div>
+<div class="name">${d.chip?`<span class="chip">${img(d.chip)}</span>`:`<h1 style="font-size:${d.name.length>9?80:96}px">${d.name}</h1>`}</div>
+<div class="sub">${d.sub}</div>
+<div class="photo${d.photo.length>1?' two':''}${d.white?' white':''}">${d.white?'<div class="box">':''}${d.photo.map(img).join('')}${d.white?'</div>':''}</div>
+<ul class="pts">${d.pts.map(t=>`<li><span class="chk"></span><span>${t}</span></li>`).join('')}</ul>`;
+</script>
+</body></html>
