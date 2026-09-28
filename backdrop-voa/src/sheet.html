@@ -41,6 +41,18 @@ body{background:radial-gradient(900px 700px at 0% 0%,rgba(46,140,255,.45),transp
 .photo.white img{height:100%}
 .pts li{font-size:38px}
 .photo:not(.white){height:560px}.photo:not(.white) img{height:520px}
+
+.mg{margin-top:30px;display:grid;grid-template-columns:1fr;gap:22px}
+.mg.four{grid-template-columns:1fr 1fr}
+.mcell{display:flex;flex-direction:column;align-items:center;gap:12px;background:rgba(255,255,255,.07);border:2px solid rgba(160,210,255,.3);border-radius:30px;padding:22px}
+.mchip{background:#fff;border-radius:18px;padding:10px 24px}.mchip img{height:62px}
+.mn{font-size:40px;font-weight:900}
+.mph{height:250px;width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:radial-gradient(ellipse 55% 45% at 50% 58%,rgba(255,255,255,.28),transparent 72%)}
+.mph img{width:94%;height:100%;object-fit:contain;filter:drop-shadow(0 16px 20px rgba(0,0,0,.5))}
+.mph.w{background:#fff;border-radius:22px;height:230px;padding:18px}.mph.w img{filter:none;width:46%}.mph.w img:only-child{width:90%}
+.mt{font-size:32px;font-weight:800;color:var(--green);text-align:center}
+.mg.four .mt{font-size:27px}
+.mg:not(.four) .mph{height:215px}.mg:not(.four){gap:18px}.mg:not(.four) .mcell{padding:16px}
 </style></head><body>
 <div class="brand"><div class="emb"><img src="img/tl_emblem.png"></div><div><div class="bn">DỊCH VỤ Y KHOA<br><b>THĂNG LONG QUỐC TẾ</b></div><div class="bv">Kết nối công nghệ, Kiến tạo giá trị</div></div></div>
 <div id="c"></div>
@@ -62,14 +74,20 @@ const P={
  gadget:{maker:'19.png',certs:['c_iso13485.png','c_gmp.png'],bd:1,cat:'HỆ THỐNG VÍT QUA DA',name:'QUATTRO GADGET',sub:'Phẫu thuật ít xâm lấn (MIS)',photo:['33.png'],white:1,
    pts:['Hệ thống vít qua da xâm lấn tối thiểu','Phù hợp phẫu thuật cột sống ít xâm lấn (MIS)']},
 };
+P.allgens={maker:'35.png',certs:['c_fda.png','c_iso.png'],cat:'VẬT LIỆU XƯƠNG SINH HỌC',name:'COLLAGEN KHOÁNG HÓA',ns:66,sub:'Đạt chứng nhận FDA Hoa Kỳ',
+  multi:[{chip:'23.png',photo:'40.png',t:'Chấn thương chỉnh hình'},{chip:'34.png',photo:'36.png',t:'Ngoại thần kinh'}],
+  pts:['Tương đồng cao với xương tự thân','Mô phỏng cấu trúc nano của xương tự nhiên','Collagen I : nano-HA = 45 : 55 · Độ xốp 70–80%']};
+P.mantiz={maker:'19.png',certs:['c_iso13485.png','c_gmp.png'],bd:1,cat:'GIẢI PHÁP CỘT SỐNG',name:'MANTIZ',sub:'Công nghệ in 3D · Phẫu thuật ít xâm lấn',white:1,
+  multi:[{n:'PANTHER',photo:['25.png','26.png'],t:'Lồng thắt lưng in 3D'},{n:'PETRA',photo:['28.png','29.png'],t:'Lồng cổ in 3D'},{n:'QUATTRO',photo:['31.png'],t:'Vít cuống sống'},{n:'QUATTRO GADGET',photo:['33.png'],t:'Vít qua da ít xâm lấn (MIS)'}],
+  pts:['Lồng in 3D: cấu trúc xốp tối ưu hóa tích hợp xương','Vít qua da phù hợp phẫu thuật ít xâm lấn (MIS)']};
 const k=new URLSearchParams(location.search).get('p'), d=P[k];
 const img=f=>`<img src="img/${f}">`;
 document.getElementById('c').outerHTML=`
 <div class="maker">${img(d.maker).replace('<img','<img class="lg"')}<div class="cr">${d.certs.map(c=>d.bd&&c.includes('13485')||c.includes('gmp')?`<img class="bd" src="img/${c}">`:img(c)).join('')}</div></div>
 <div class="cat">${d.cat}</div>
-<div class="name">${d.chip?`<span class="chip">${img(d.chip)}</span>`:`<h1 style="font-size:${d.name.length>9?80:96}px">${d.name}</h1>`}</div>
+<div class="name">${d.chip?`<span class="chip">${img(d.chip)}</span>`:`<h1 style="font-size:${d.ns||(d.name.length>9?80:96)}px">${d.name}</h1>`}</div>
 <div class="sub">${d.sub}</div>
-<div class="photo${d.photo.length>1?' two':''}${d.white?' white':''}">${d.white?'<div class="box">':''}${d.photo.map(img).join('')}${d.white?'</div>':''}</div>
+${d.multi?`<div class="mg${d.multi.length>2?' four':''}">${d.multi.map(m=>`<div class="mcell">${m.chip?`<span class="mchip">${img(m.chip)}</span>`:`<b class="mn">${m.n}</b>`}<div class="mph${d.white?' w':''}">${[].concat(m.photo).map(img).join('')}</div><div class="mt">${m.t}</div></div>`).join('')}</div>`:`<div class="photo${d.photo.length>1?' two':''}${d.white?' white':''}">${d.white?'<div class="box">':''}${d.photo.map(img).join('')}${d.white?'</div>':''}</div>`}
 <ul class="pts">${d.pts.map(t=>`<li><span class="chk"></span><span>${t}</span></li>`).join('')}</ul>`;
 </script>
 </body></html>
