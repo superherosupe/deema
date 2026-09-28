@@ -23,7 +23,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 .emb img{width:118px}
 .bname{font-size:50px;font-weight:900;letter-spacing:1px;white-space:nowrap;line-height:1.05}
 .bname b{color:var(--green);font-weight:900}
-.bval{font-size:28px;font-weight:700;color:var(--ice);margin-top:12px;white-space:nowrap}
+.bval{font-size:34px;font-style:italic;letter-spacing:.5px;font-weight:700;color:var(--ice);margin-top:12px;white-space:nowrap}
 .qrs{display:flex;gap:14px}
 .qr{background:#fff;border-radius:16px;padding:8px 8px 6px;display:flex;flex-direction:column;align-items:center;gap:3px;box-shadow:0 10px 26px rgba(0,0,0,.35)}
 .qr img{width:118px;height:118px;display:block}
@@ -103,6 +103,30 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 .mi .nm span{font-size:15px;font-weight:600;color:var(--ice);white-space:nowrap}
 .solo{padding:4px 12px}
 .mis{display:inline-block;background:var(--green);color:#0a3170;font-weight:900;font-size:13px;padding:2px 8px;border-radius:10px;letter-spacing:1px}
+
+/* ===== v12: split CUVIS | Mantiz ===== */
+.sp .head.split{display:grid;grid-template-columns:1fr 2px 318px;padding:0 0 0 26px;gap:0}
+.sp .head.split .sep{height:64px;justify-self:center}
+.sp .head.split .mzg{justify-content:center;gap:10px}
+.sp .head.split .mzg .logo{height:34px}
+.sp .head.split .mzg .certs-row .bd{height:40px}
+.sp .stage{padding:0 0 0 22px}
+.cols{margin-top:0;grid-template-columns:1fr 2px 318px;gap:0}
+.rcol{display:flex;flex-direction:column;min-height:0;padding:16px 18px 16px 0}
+.rcol .cap{font-size:25px}
+.rcol .rz{flex:1}
+.vdiv{background:linear-gradient(180deg,rgba(160,210,255,0),rgba(160,210,255,.55) 15%,rgba(160,210,255,.55) 85%,rgba(160,210,255,0))}
+.implants{background:rgba(4,18,46,.28);padding:18px 14px}
+.implants .grp3d{padding:10px 10px 6px}
+.th{width:84px;height:64px}
+.mi .nm b{font-size:18px}.mi .nm span{font-size:14.5px}
+.grp3d .d{font-size:14.5px}
+.rz .robot{height:500px;top:66px;left:150px}
+.rz .floor{top:480px;width:548px}
+.rcol .cap{font-size:23px;letter-spacing:.5px}
+.grp3d .d{white-space:normal;line-height:1.25}
+.implants .mi .nm span{white-space:normal}
+.implants{padding:18px 16px 18px 16px}
 </style></head><body>
 <div class="bg">
   <div class="ring" style="width:620px;height:620px;right:-220px;top:-260px"></div>
@@ -114,7 +138,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
     <div class="emb"><img src="img/tl_emblem.png" alt="Logo Thăng Long Quốc Tế"></div>
     <div>
       <div class="bname t">DỊCH VỤ Y KHOA <b>THĂNG LONG QUỐC TẾ</b></div>
-      <div class="bval t">Công nghệ tiên tiến trong Phẫu thuật Cột sống &amp; Chấn thương Chỉnh hình</div>
+      <div class="bval t">Kết nối công nghệ, Kiến tạo giá trị</div>
     </div>
   </div>
   <div class="qrs">
@@ -149,14 +173,15 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 
   <!-- SPINE -->
   <div class="card sp">
-    <div class="head">
+    <div class="head split">
       <div class="grp"><img class="logo" src="img/43.png" alt="Curexo"><div class="certs-row"><img class="wm" src="img/c_ce.png" alt="CE"><img class="wm" src="img/c_fda.png" alt="FDA"></div></div>
       <span class="sep"></span>
-      <div class="grp"><img class="logo" src="img/19.png" alt="Mantiz"><div class="certs-row"><img class="bd" src="img/c_iso13485.png" alt="ISO 13485"><img class="bd" src="img/c_gmp.png" alt="GMP"></div></div>
+      <div class="grp mzg"><img class="logo" src="img/19.png" alt="Mantiz"><div class="certs-row"><img class="bd" src="img/c_iso13485.png" alt="ISO 13485"><img class="bd" src="img/c_gmp.png" alt="GMP"></div></div>
     </div>
     <div class="stage">
-      <div class="cap t">GIẢI PHÁP TÍCH HỢP CHO <b>PHẪU THUẬT CỘT SỐNG</b></div>
       <div class="cols">
+        <div class="rcol">
+        <div class="cap t">GIẢI PHÁP TÍCH HỢP CHO <b>PHẪU THUẬT CỘT SỐNG</b></div>
         <div class="rz" id="rz">
           <span class="chip"><img src="img/38.png" alt="CUVIS Spine"></span>
           <div class="floor"></div>
@@ -166,15 +191,17 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
           <div class="bub" id="b2" style="right:6px;top:76px"><span class="ic t">02</span><span class="tx t">Độ chính xác cao</span></div>
           <div class="bub" id="b3" style="left:0px;top:340px"><span class="ic t">03</span><span class="tx t">Tối ưu hóa<br>quy trình<br>phẫu thuật</span></div>
         </div>
+        </div>
+        <div class="vdiv"></div>
         <div class="implants">
           <div class="grp3d">
             <span class="tag t">CÔNG NGHỆ IN 3D</span>
-            <div class="d t">Cấu trúc xốp tối ưu hóa tích hợp xương</div>
+            <div class="d t">Cấu trúc xốp tối ưu hóa<br>tích hợp xương</div>
             <div class="mi"><span class="th two"><img src="img/25.png" alt=""><img src="img/26.png" alt=""></span><div class="nm"><b class="t">PANTHER</b><span class="t">Lồng thắt lưng in 3D</span></div></div>
             <div class="mi"><span class="th two"><img src="img/28.png" alt=""><img src="img/29.png" alt=""></span><div class="nm"><b class="t">PETRA</b><span class="t">Lồng cổ in 3D</span></div></div>
           </div>
           <div class="mi solo"><span class="th"><img src="img/31.png" alt=""></span><div class="nm"><b class="t">QUATTRO</b><span class="t">Vít cuống sống</span></div></div>
-          <div class="mi solo"><span class="th"><img src="img/33.png" alt=""></span><div class="nm"><b class="t">QUATTRO GADGET</b><div style="display:flex;align-items:center;gap:6px"><span class="t">Vít qua da ít xâm lấn</span><span class="mis t">MIS</span></div></div></div>
+          <div class="mi solo"><span class="th"><img src="img/33.png" alt=""></span><div class="nm"><b class="t">QUATTRO GADGET</b><span class="t">Vít qua da</span><div style="display:flex;align-items:center;gap:6px"><span class="t">Ít xâm lấn</span><span class="mis t">MIS</span></div></div></div>
         </div>
       </div>
     </div>
