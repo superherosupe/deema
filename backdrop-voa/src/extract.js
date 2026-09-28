@@ -18,9 +18,9 @@ const data=await p.evaluate(()=>{
 require('fs').writeFileSync('layout.json',JSON.stringify(data,null,1));
 await p.addStyleTag({content:`
  .t{visibility:hidden!important}
- .tag.t{visibility:visible!important;color:transparent!important}
+ .tag.t,.ic.t,.mis.t{visibility:visible!important;color:transparent!important}
  img{opacity:0}
  img.shadow{opacity:1!important;filter:brightness(0) blur(7px) opacity(.32)!important;transform:translateY(12px)}`});
-await p.waitForTimeout(300);
+await p.waitForTimeout(600);
 await p.screenshot({path:'ppt_bg.png'});
 await b.close()})();

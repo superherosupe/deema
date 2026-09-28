@@ -12,7 +12,7 @@ for(const t of d.texts){
   if(t.align==='center') x=t.x-slack/2;
   const opts={x:P(x),y:P(t.y-t.h*0.08),w:P(w),h:P(t.h*1.16),fontFace:'Arial',fontSize:t.fs*0.5,bold:+t.fw>=700,italic:!!t.italic,
     align:t.align==='center'?'center':'left',valign:'middle',margin:0,charSpacing:t.ls*0.5,isTextBox:true,fit:'none'};
-  if(/\btag\b/.test(t.cls)){opts.x=P(t.x);opts.w=P(t.w);opts.align='center';}
+  if(/\b(tag|ic|mis)\b/.test(t.cls)){opts.x=P(t.x);opts.w=P(t.w);opts.align='center';}
   const runs=t.runs.filter(r=>r.text!=='');
   if(runs.length>1){
     const arr=[];
