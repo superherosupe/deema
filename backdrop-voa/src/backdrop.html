@@ -207,20 +207,11 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 .piw img{max-height:168px}
 .st b{font-size:30px}.st span{font-size:16px}
 
-/* ===== v18: per-product QR (1px = 2.6mm at 5m) ===== */
-.pq{display:inline-flex;background:#fff;border-radius:8px;padding:4px;box-shadow:0 4px 10px rgba(0,0,0,.3);flex:none}
-.pq img{width:62px;height:62px;display:block}
-.rz .rq{position:absolute;left:0;top:50px}
-.rz .rq img{width:64px;height:64px}
-.pr{display:flex;align-items:center;justify-content:center;gap:8px;width:100%}
-.pr .tx{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0}
-.pr .pq img{width:54px;height:54px}
-.pimg{height:106px}
-.implants .grp3d .d{margin:4px 0 6px}
-.pc span{font-size:14.5px}.pc b{font-size:18px}
-.pr{gap:6px}.pr .tx span{white-space:nowrap;font-size:13.5px}.pr .tx b{font-size:17px;white-space:nowrap}
-.pr .pq{padding:3px}.pr .pq img{width:52px;height:52px}
-.implants{padding:16px 14px}.pair{gap:10px}
+/* ===== v19: one QR per brand, in brand header (1px = 2.6mm) ===== */
+.head .hq{height:74px;width:74px;margin-left:10px;display:block}
+.head .certs-row{align-items:center}
+.sp .head.split .grp{gap:12px}
+.sp .head.split .mzg .hq{margin-left:4px}
 </style></head><body>
 <div class="bg">
   <div class="ring" style="width:620px;height:620px;right:-220px;top:-260px"></div>
@@ -249,7 +240,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 <div class="main">
   <!-- ALLGENS -->
   <div class="card ag">
-    <div class="head"><img class="logo" src="img/35.png" alt="Allgens"><div class="certs-row"><img class="wm" src="img/c_fda.png" alt="FDA"><img class="wm" src="img/c_iso.png" alt="ISO"></div></div>
+    <div class="head"><img class="logo" src="img/35.png" alt="Allgens"><div class="certs-row"><img class="wm" src="img/c_fda.png" alt="FDA"><img class="wm" src="img/c_iso.png" alt="ISO"><img class="hq" src="img/qr_b_allgens.png" alt="QR allgens"></div></div>
     <div class="stage">
       <div class="cap t">VẬT LIỆU XƯƠNG SINH HỌC COLLAGEN KHOÁNG HÓA</div>
       <div class="slogan">
@@ -257,8 +248,8 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
         <div class="s"><span class="chk"></span><span class="t">Tương đồng cao với <b>xương tự thân</b></span></div>
       </div>
       <div class="prods">
-        <div class="prod"><div class="info"><span class="chip"><img src="img/23.png" alt="BonGold"></span><span class="lbl t">Chấn thương<br>chỉnh hình</span><span class="pq"><img src="img/qr_p_bongold.png" alt="QR bongold"></span></div><div class="piw"><img class="shadow" src="img/40.png" alt=""></div></div>
-        <div class="prod flip"><div class="info"><span class="chip"><img src="img/34.png" alt="Skulheal"></span><span class="lbl t">Ngoại thần kinh</span><span class="pq"><img src="img/qr_p_skulheal.png" alt="QR skulheal"></span></div><div class="piw"><img class="shadow" src="img/36.png" alt=""></div></div>
+        <div class="prod"><div class="info"><span class="chip"><img src="img/23.png" alt="BonGold"></span><span class="lbl t">Chấn thương<br>chỉnh hình</span></div><div class="piw"><img class="shadow" src="img/40.png" alt=""></div></div>
+        <div class="prod flip"><div class="info"><span class="chip"><img src="img/34.png" alt="Skulheal"></span><span class="lbl t">Ngoại thần kinh</span></div><div class="piw"><img class="shadow" src="img/36.png" alt=""></div></div>
       </div>
       <div class="stats">
         <div class="st"><b class="t">45 : 55</b><span class="t">Collagen I : nano-HA</span></div>
@@ -271,16 +262,16 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
   <!-- SPINE -->
   <div class="card sp">
     <div class="head split">
-      <div class="grp"><img class="logo" src="img/43.png" alt="Curexo"><div class="certs-row"><img class="wm" src="img/c_ce.png" alt="CE"><img class="wm" src="img/c_fda.png" alt="FDA"></div></div>
+      <div class="grp"><img class="logo" src="img/43.png" alt="Curexo"><div class="certs-row"><img class="wm" src="img/c_ce.png" alt="CE"><img class="wm" src="img/c_fda.png" alt="FDA"><img class="hq" src="img/qr_b_cuvis.png" alt="QR cuvis"></div></div>
       <span class="sep"></span>
-      <div class="grp mzg"><img class="logo" src="img/19.png" alt="Mantiz"><div class="certs-row"><img class="bd" src="img/c_iso13485.png" alt="ISO 13485"><img class="bd" src="img/c_gmp.png" alt="GMP"></div></div>
+      <div class="grp mzg"><img class="logo" src="img/19.png" alt="Mantiz"><div class="certs-row"><img class="bd" src="img/c_iso13485.png" alt="ISO 13485"><img class="bd" src="img/c_gmp.png" alt="GMP"><img class="hq" src="img/qr_b_mantiz.png" alt="QR mantiz"></div></div>
     </div>
     <div class="stage">
       <div class="cols">
         <div class="rcol">
         <div class="cap t">GIẢI PHÁP TÍCH HỢP CHO<br><b>PHẪU THUẬT CỘT SỐNG</b></div>
         <div class="rz" id="rz">
-          <span class="chip"><img src="img/38.png" alt="CUVIS Spine"></span><span class="pq rq"><img src="img/qr_p_cuvis.png" alt="QR cuvis"></span>
+          <span class="chip"><img src="img/38.png" alt="CUVIS Spine"></span>
           <div class="floor"></div>
           <img class="robot shadow" id="robot" src="img/37.png" alt="Robot CUVIS Spine">
           <svg id="lines"></svg>
@@ -295,13 +286,13 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
             <span class="tag t">CÔNG NGHỆ IN 3D</span>
             <div class="d t">Cấu trúc xốp tối ưu hóa<br>tích hợp xương</div>
             <div class="pair">
-              <div class="pc"><div class="pimg two"><img src="img/25.png" alt=""><img src="img/26.png" alt=""></div><div class="pr"><div class="tx"><b class="t">PANTHER</b><span class="t">Lồng thắt lưng<br>in 3D</span></div><span class="pq"><img src="img/qr_p_panther.png" alt="QR panther"></span></div></div>
-              <div class="pc"><div class="pimg two"><img src="img/28.png" alt=""><img src="img/29.png" alt=""></div><div class="pr"><div class="tx"><b class="t">PETRA</b><span class="t">Lồng cổ<br>in 3D</span></div><span class="pq"><img src="img/qr_p_petra.png" alt="QR petra"></span></div></div>
+              <div class="pc"><div class="pimg two"><img src="img/25.png" alt=""><img src="img/26.png" alt=""></div><b class="t">PANTHER</b><span class="t">Lồng thắt lưng<br>in 3D</span></div>
+              <div class="pc"><div class="pimg two"><img src="img/28.png" alt=""><img src="img/29.png" alt=""></div><b class="t">PETRA</b><span class="t">Lồng cổ<br>in 3D</span></div>
             </div>
           </div>
           <div class="pair">
-            <div class="pc box"><div class="pimg"><img src="img/31.png" alt=""></div><div class="pr"><div class="tx"><b class="t">QUATTRO</b><span class="t">Vít cuống<br>sống</span></div><span class="pq"><img src="img/qr_p_quattro.png" alt="QR quattro"></span></div></div>
-            <div class="pc box"><div class="pimg"><img src="img/33.png" alt=""></div><div class="pr"><div class="tx"><b class="t">QUATTRO<br>GADGET</b><span class="t">Vít qua da</span><span class="mis t">MIS</span></div><span class="pq"><img src="img/qr_p_gadget.png" alt="QR gadget"></span></div></div>
+            <div class="pc box"><div class="pimg"><img src="img/31.png" alt=""></div><b class="t">QUATTRO</b><span class="t">Vít cuống sống</span></div>
+            <div class="pc box"><div class="pimg"><img src="img/33.png" alt=""></div><b class="t">QUATTRO<br>GADGET</b><span class="t">Vít qua da<br>ít xâm lấn</span><span class="mis t">MIS</span></div>
           </div>
         </div>
       </div>
