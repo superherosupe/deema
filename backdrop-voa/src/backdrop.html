@@ -142,6 +142,16 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 .pc .mis{color:#0a3170;font-size:13px;margin-top:3px}
 .pimg{height:128px}
 .pc .mis{padding:3px 14px;letter-spacing:2px}
+
+/* ===== v14: QR sized for 5m-wide print (1px = 2.6mm) ===== */
+.connect{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.ctop{display:flex;align-items:center;gap:18px;white-space:nowrap}
+.ck{font-size:16px;font-weight:800;letter-spacing:3px;color:var(--ice)}
+.hl{font-size:20px;font-weight:700;color:#fff}.hl b{color:var(--green);font-weight:900;font-size:26px}
+.qrs{gap:12px}
+.qr{padding:6px 6px 4px;border-radius:12px;gap:2px}
+.qr img{width:78px;height:78px}
+.qr .n{font-size:13px}
 </style></head><body>
 <div class="bg">
   <div class="ring" style="width:620px;height:620px;right:-220px;top:-260px"></div>
@@ -156,11 +166,14 @@ body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
       <div class="bval t">Kết nối công nghệ, Kiến tạo giá trị</div>
     </div>
   </div>
+  <div class="connect">
+    <div class="ctop"><span class="ck t">KẾT NỐI VỚI CHÚNG TÔI</span><span class="hl t">Hotline <b>0916 899 322</b></span></div>
   <div class="qrs">
     <div class="qr"><img src="img/qr_facebook.png" alt="QR Facebook"><span class="n t">Facebook</span></div>
     <div class="qr"><img src="img/qr_zalo.png" alt="QR Zalo"><span class="n t">Zalo</span></div>
     <div class="qr"><img src="img/qr_tiktok.png" alt="QR TikTok"><span class="n t">TikTok</span></div>
     <div class="qr"><img src="img/qr_instagram.png" alt="QR Instagram"><span class="n t">Instagram</span></div>
+  </div>
   </div>
 </div>
 
