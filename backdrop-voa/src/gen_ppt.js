@@ -5,6 +5,7 @@ const pres=new pptxgen();pres.defineLayout({name:'BD2x1',width:13.333,height:6.6
 const s=pres.addSlide();
 s.background={path:'ppt_bg.png'};
 for(const i of d.imgs) s.addImage({path:i.src,x:P(i.x),y:P(i.y),w:P(i.w),h:P(i.h),altText:i.alt||path.basename(i.src)});
+s.addImage({path:'ppt_lines.png',x:0,y:0,w:13.333,h:6.667,altText:'Callout lines'});
 const hex=c=>c.match(/\d+/g).map(Number).slice(0,3).map(v=>v.toString(16).padStart(2,'0')).join('').toUpperCase();
 for(const t of d.texts){
   const slack=t.w*0.14; let x=t.x,w=t.w+slack;
