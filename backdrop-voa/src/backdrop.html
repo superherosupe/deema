@@ -1,206 +1,180 @@
 <!DOCTYPE html>
 <html lang="vi"><head><meta charset="utf-8"><title>Backdrop VOA</title>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
 <style>
-:root{--cx:#ff6a1a;--ag:#19b85a;--mz:#1e6bff}
+:root{--navy:#061a3f;--blue:#0f4c9a;--blue2:#0a3272;--green:#8ed14f;--ice:#cfe6ff}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{width:1920px;height:1080px;overflow:hidden;background:#12093a}
+html,body{width:1920px;height:1080px;overflow:hidden;background:var(--navy)}
 body{font-family:'Be Vietnam Pro',sans-serif;position:relative;color:#fff}
 .bg{position:absolute;inset:0;overflow:hidden;
   background:
-   radial-gradient(900px 700px at 0% 100%, #ff2e8a 0%, transparent 60%),
-   radial-gradient(800px 650px at 100% 0%, #00d4ff 0%, transparent 60%),
-   radial-gradient(700px 600px at 55% 115%, #ffb300 0%, transparent 60%),
-   radial-gradient(700px 520px at 10% 0%, #7b2cff 0%, transparent 65%),
-   radial-gradient(650px 520px at 100% 100%, #00e0a0 0%, transparent 60%),
-   linear-gradient(135deg,#2a0f7a 0%,#1a0a55 45%,#0c2a7a 100%);}
+   radial-gradient(900px 600px at 8% 0%,rgba(46,140,255,.45),transparent 65%),
+   radial-gradient(800px 600px at 100% 100%,rgba(120,200,80,.22),transparent 65%),
+   radial-gradient(900px 700px at 60% 40%,rgba(30,110,220,.25),transparent 70%),
+   linear-gradient(160deg,#0a2a63 0%,#061a3f 55%,#04122e 100%)}
 .bg::before{content:"";position:absolute;inset:-20%;
-  background:repeating-linear-gradient(115deg,rgba(255,255,255,.07) 0 2px,transparent 2px 46px);
-  mask:linear-gradient(180deg,transparent,#000 40%,transparent)}
-.ring{position:absolute;border-radius:50%;border:3px solid rgba(255,255,255,.18)}
-.dots{position:absolute;width:260px;height:260px;
-  background:radial-gradient(circle,rgba(255,255,255,.35) 2.5px,transparent 3px) 0 0/22px 22px}
-.streak{position:absolute;height:6px;border-radius:6px;transform:rotate(-24deg)}
+  background:repeating-linear-gradient(115deg,rgba(255,255,255,.05) 0 2px,transparent 2px 46px)}
+.ring{position:absolute;border-radius:50%;border:2px solid rgba(160,210,255,.16)}
+
 /* header */
-.top{position:absolute;left:70px;right:70px;top:40px;height:140px;display:flex;align-items:center;justify-content:space-between}
-.welcome .k{font-size:26px;font-weight:700;letter-spacing:6px;color:#ffe066}
-.welcome h1{font-size:92px;line-height:1;font-weight:900;letter-spacing:2px;
-  background:linear-gradient(90deg,#fff 0%,#ffe066 45%,#ff8ac2 100%);-webkit-background-clip:text;color:transparent;
-  filter:drop-shadow(0 6px 18px rgba(0,0,0,.35))}
-.welcome .t{margin-top:10px;font-size:30px;font-weight:600;color:#e8f4ff}
-.welcome .t b{color:#7ff0ff}
-.tlqt{background:#fff;border-radius:26px;padding:14px 28px 14px 18px;box-shadow:0 14px 40px rgba(0,0,0,.35);display:flex;align-items:center;gap:18px}
-.tlqt .em{height:128px;display:block}.tlqt .wd{height:62px;display:block}
+.top{position:absolute;left:56px;right:56px;top:34px;height:150px;display:flex;align-items:center;justify-content:space-between}
+.title .l1{font-size:70px;font-weight:900;line-height:1.02;letter-spacing:1px;color:#fff}
+.title .l2{font-size:34px;font-weight:700;margin-top:10px;color:var(--green)}
+.tlqt{background:#fff;border-radius:24px;padding:12px 26px 12px 16px;box-shadow:0 14px 40px rgba(0,0,0,.35);display:flex;align-items:center;gap:16px}
+.tlqt .em{height:118px;display:block}.tlqt .wd{height:56px;display:block}
 
-/* cards */
-.cards{position:absolute;left:60px;right:60px;top:210px;bottom:96px;display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:30px}
-.card{position:relative;background:#fff;border-radius:34px;color:#10214a;overflow:hidden;
-  box-shadow:0 24px 60px rgba(0,0,0,.4);display:flex;flex-direction:column;border:4px solid rgba(255,255,255,.9)}
-.head{height:112px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:22px 28px;background:#fff}
-.head .logo{height:62px}
-.certs{height:34px;filter:brightness(0) saturate(100%) invert(18%) sepia(40%) saturate(2000%) hue-rotate(210deg)}
-.stage{flex:1;min-height:0;display:flex;flex-direction:column;position:relative;background:var(--stage)}
-.stage::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 45% at 50% 55%,rgba(255,255,255,.22),transparent 70%);pointer-events:none}
-.chip{background:#fff;border-radius:18px;padding:10px 20px;box-shadow:0 8px 20px rgba(0,0,0,.25);display:inline-flex;align-items:center;position:relative}
-.lbl{font-size:28px;font-weight:800;color:#fff;line-height:1.2;text-shadow:0 3px 10px rgba(0,0,0,.35);position:relative}
+/* body grid */
+.main{position:absolute;left:56px;right:56px;top:206px;bottom:40px;display:grid;grid-template-columns:790px 1fr 206px;gap:24px}
+.card{position:relative;border-radius:30px;overflow:hidden;display:flex;flex-direction:column;
+  background:linear-gradient(170deg,#15559f 0%,#0d3f84 55%,#0a3170 100%);
+  border:2px solid rgba(160,210,255,.35);box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.head{height:104px;flex:none;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 26px;gap:16px}
+.certs-row{display:flex;align-items:center;gap:14px;flex:none}
+.certs-row .wm{height:34px}.certs-row .bd{height:54px}
+.stage{flex:1;min-height:0;position:relative;display:flex;flex-direction:column}
+.chip{background:#fff;border-radius:16px;padding:8px 18px;box-shadow:0 8px 20px rgba(0,0,0,.28);display:inline-flex;align-items:center}
 .shadow{filter:drop-shadow(0 14px 18px rgba(0,0,0,.45))}
-/* curexo */
-.cx{--stage:linear-gradient(165deg,#ffa04a 0%,#ff5a5a 45%,#c42a78 100%)}
-.cx .stage{align-items:center;text-align:center;padding:24px 20px 20px;gap:14px}
-.cx .chip img{height:74px}
-.cx .robot{flex:1 1 0;height:0;min-height:0;max-width:100%;object-fit:contain;position:relative}
-/* allgens */
-.ag{--stage:linear-gradient(170deg,#0fb38a 0%,#0a7f86 55%,#0a4f7a 100%)}
-.ag .head .logo{height:76px}.ag .head .certs{height:28px}
-.prod{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:14px 18px;position:relative}
-.prod+.prod{border-top:2px solid rgba(255,255,255,.25)}
-.prod .chip img{height:52px}
-.prod .pi{height:128px;max-width:100%;object-fit:contain;position:relative}
-/* mantiz */
-.mz{--stage:linear-gradient(170deg,#e4ecff 0%,#efe6ff 100%)}
-.mz .stage::before{display:none}
-.mz .stage.grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;padding:0}
-.cell{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px;text-align:center;min-height:0}
-.cell:nth-child(odd){border-right:2px solid #fff}.cell:nth-child(-n+2){border-bottom:2px solid #fff}
-.cell .pl{height:44px}.cell .pl.tall{height:54px}
-.cell .imgs{display:flex;justify-content:center;align-items:center;gap:10px;height:130px;width:100%}
-.cell .imgs img{max-height:100%;max-width:100%;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(40,30,110,.35))}
-.cell .imgs img:first-child:nth-last-child(2),.cell .imgs img:nth-child(2){max-width:47%}
-.cell .txt{font-size:26px;font-weight:800;color:#1d2b5c;line-height:1.2}
-.ag .head{justify-content:flex-start;gap:12px;padding:22px 22px}.ag .head .certs{margin-left:auto}
-.cap{position:relative;text-align:center;padding-top:14px;font-size:20px;font-weight:800;letter-spacing:5px;color:#c9fff0}
-.certs-row{margin-left:auto;display:flex;align-items:center;gap:18px;flex:none}
-.certs-row .wm{height:40px}
-.certs-row .bd{height:72px}
-/* footer */
-.foot{position:absolute;left:0;right:0;bottom:0;height:64px;display:flex;align-items:center;justify-content:center;gap:22px;
-  background:rgba(10,6,40,.55);border-top:1px solid rgba(255,255,255,.18)}
-.foot .l{font-size:20px;font-weight:700;letter-spacing:3px;color:#ffe9a8}
-.foot .p{font-size:34px;font-weight:800;letter-spacing:2px}
-.foot .sep{width:3px;height:48px;background:rgba(255,255,255,.5)}
-.foot .s{font-size:26px;font-weight:600}
+.chk{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--green);align-items:center;justify-content:center;flex:none}
+.chk::after{content:"";width:12px;height:7px;border-left:3.5px solid #0a3170;border-bottom:3.5px solid #0a3170;transform:translateY(-2px) rotate(-45deg)}
 
-/* ===== Allgens featured ===== */
-.cards{grid-template-columns:400px 1fr 470px;align-items:end;top:200px}
-.card.cx,.card.mz{height:calc(100% - 44px)}
-.card.ag{height:100%;border:5px solid #7dffd9;box-shadow:0 0 0 3px rgba(125,255,217,.35),0 0 60px rgba(40,255,190,.45),0 30px 70px rgba(0,0,0,.45)}
-.ag .head{height:132px}
-.ag .head .logo{height:100px}
-.ag .certs-row .wm{height:50px}
-.ag .cap{font-size:28px;letter-spacing:8px;padding-top:18px;color:#d8fff4}
-.ag .prod .chip img{height:66px}
-.ag .prod{display:grid;grid-template-columns:290px 1fr;grid-template-rows:auto auto;align-content:center;column-gap:10px;row-gap:14px;padding:10px 26px;justify-items:center}
-.ag .prod .chip{grid-column:1;grid-row:1;align-self:end}
-.ag .prod .lbl{grid-column:1;grid-row:2;align-self:start;font-size:30px;text-wrap:balance}
-.ag .prod .pi{grid-column:2;grid-row:1/3;height:auto;width:100%;max-height:250px;align-self:center}
-.ag .prod.flip{grid-template-columns:1fr 290px}
-.ag .prod.flip .chip,.ag .prod.flip .lbl{grid-column:2}.ag .prod.flip .pi{grid-column:1}
-/* compact side cards */
-.cx .head,.mz .head{height:100px;padding:18px 20px}
-.cx .head .logo{height:44px}
-.cx .certs-row{gap:12px}.cx .certs-row .wm{height:28px}
-.mz .head .logo{height:50px}
-.mz .certs-row{gap:12px}.mz .certs-row .bd{height:58px}
-.cx .chip img{height:56px}
-.cx .lbl{font-size:24px;text-wrap:balance}
-.cx .stage{padding:20px 16px 16px}
-.cell{padding:12px 8px;gap:8px}
-.cell .pl{height:36px}.cell .pl.tall{height:44px}
-.cell .imgs{height:104px}
-.cell .txt{font-size:21px;text-wrap:balance}
+/* Allgens */
+.ag{border:3px solid var(--green);box-shadow:0 0 0 3px rgba(142,209,79,.25),0 0 50px rgba(142,209,79,.35),0 24px 60px rgba(0,0,0,.45)}
+.ag .head .logo{height:78px}
+.ag .stage{padding:18px 28px 20px}
+.ag .cap{text-align:center;font-size:23px;font-weight:800;letter-spacing:2px;white-space:nowrap;color:var(--ice)}
+.slogan{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:12px}
+.slogan .s{display:flex;align-items:center;gap:14px;font-size:34px;font-weight:800;color:#fff}
+.slogan .s .t b{color:var(--green)}
+.prods{flex:1;min-height:0;display:flex;flex-direction:column;margin-top:10px}
+.prod{flex:1;min-height:0;display:grid;grid-template-columns:250px 1fr;align-items:center;column-gap:10px}
+.prod+.prod{border-top:1.5px solid rgba(255,255,255,.18)}
+.prod.flip{grid-template-columns:1fr 250px}
+.prod .info{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+.prod.flip .info{order:2}
+.prod .chip img{height:48px}
+.prod .lbl{font-size:25px;font-weight:800}
+.piw{height:100%;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(ellipse 55% 42% at 50% 60%,rgba(255,255,255,.26),rgba(255,255,255,.06) 55%,transparent 72%)}
+.piw img{max-width:100%;max-height:170px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.28);border-radius:20px;padding:12px 4px;margin-top:8px}
+.st{text-align:center;padding:2px 6px}.st+.st{border-left:1.5px solid rgba(255,255,255,.25)}
+.st b{display:block;font-size:31px;font-weight:900;color:var(--green);line-height:1.1}
+.st span{display:block;font-size:17px;font-weight:600;color:var(--ice);margin-top:3px}
 
-/* ===== v8 ===== */
-.cards{grid-template-columns:400px 1fr 400px}
-.ag .cap{font-size:24px;letter-spacing:5px;padding-top:16px}
-.tag{position:relative;text-align:center;color:#fff;font-size:22px;font-weight:600;font-style:italic;opacity:.92;margin-top:4px}
-.ag .prod .pi{max-height:200px}
-.stats{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:0 22px 20px}
-.st{background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.35);border-radius:18px;padding:12px 8px;text-align:center;color:#fff}
-.st b{display:block;font-size:32px;font-weight:900;color:#ffe066;line-height:1.1}
-.st span{display:block;font-size:17px;font-weight:600;margin-top:4px;color:#e6fff8}
-.mz .stage.mlist{display:flex;flex-direction:column;justify-content:center;padding:10px 26px;gap:0}
-.mi{padding:20px 0;border-bottom:2px solid #fff;display:flex;flex-direction:column;gap:4px}
-.mi:last-child{border-bottom:0}
-.mi b{font-size:26px;font-weight:900;color:#2f3fb0;letter-spacing:1px}
-.mi span{font-size:22px;font-weight:600;color:#1d2b5c}
-.mz .head .logo{height:42px}.mz .certs-row{gap:10px}.mz .certs-row .bd{height:52px}
-.mcap{font-size:20px;font-weight:800;letter-spacing:5px;color:#6a55d8;padding-bottom:6px}
-.mi{padding:24px 0}
+/* Spine solution */
+.sp .head .logo.cx{height:40px}.sp .head .logo.mz{height:40px}
+.sp .head .grp{display:flex;align-items:center;gap:14px}
+.sp .head .sep{width:2px;height:54px;background:#d5dbea}
+.sp .head .certs-row .wm{height:26px}.sp .head .certs-row .bd{height:46px}.sp .head .certs-row{gap:8px}
+.sp .stage{padding:18px 22px 20px}
+.sp .cap{text-align:center;white-space:nowrap;font-size:25px;font-weight:900;letter-spacing:1px;color:#fff}
+.cols{flex:1;min-height:0;display:grid;grid-template-columns:320px 1fr;gap:16px;margin-top:14px}
+.robotcol{display:flex;flex-direction:column;align-items:center;gap:10px;min-height:0}
+.robotcol .chip img{height:44px}
+.rw{flex:1 1 0;min-height:0;width:100%;display:flex;justify-content:center;
+  background:radial-gradient(ellipse 60% 14% at 50% 95%,rgba(255,255,255,.4),transparent 70%),radial-gradient(ellipse 55% 45% at 50% 55%,rgba(255,255,255,.16),transparent 70%)}
+.rw img{height:100%;max-width:100%;object-fit:contain}
+.benefits{align-self:stretch;display:flex;flex-direction:column;gap:9px}
+.benefits .b{display:flex;align-items:center;gap:10px;white-space:nowrap;font-size:18px;font-weight:700}
+.benefits .chk{width:24px;height:24px}.benefits .chk::after{width:10px;height:6px;border-width:0 0 3px 3px}
+.implants{display:flex;flex-direction:column;gap:10px;min-height:0}
+.grp3d{border:1.5px solid rgba(142,209,79,.6);border-radius:18px;padding:10px 12px 8px;background:rgba(142,209,79,.08)}
+.tag{display:inline-block;background:var(--green);color:#0a3170;font-weight:900;font-size:15px;letter-spacing:2px;padding:4px 12px;border-radius:20px}
+.grp3d .d{font-size:17px;font-weight:700;color:#fff;margin:6px 0 4px}
+.mi{display:flex;align-items:center;gap:14px;padding:6px 0}
+.th{flex:none;width:104px;height:78px;border-radius:14px;background:#fff;box-shadow:0 6px 14px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;gap:2px;padding:7px}
+.th img{max-width:100%;max-height:100%;object-fit:contain}.th.two img{max-width:49%}
+.mi .nm{display:flex;flex-direction:column;gap:2px}
+.mi .nm b{font-size:21px;font-weight:900;color:#fff;letter-spacing:.5px;white-space:nowrap}
+.mi .nm span{font-size:17px;font-weight:600;color:var(--ice);white-space:nowrap}
+.solo{padding:4px 12px}
 
-/* ===== v9 polish ===== */
-.ag .prod .piw{grid-column:2;grid-row:1/3;width:100%;height:100%;display:flex;align-items:center;justify-content:center;
-  background:radial-gradient(ellipse 55% 42% at 50% 62%,rgba(255,255,255,.30),rgba(255,255,255,.08) 55%,transparent 72%)}
-.ag .prod.flip .piw{grid-column:1}
-.ag .prod .pi{grid-column:auto;grid-row:auto;max-height:200px}
-.rw{flex:1 1 0;min-height:0;width:100%;display:flex;justify-content:center;position:relative;
-  background:radial-gradient(ellipse 60% 16% at 50% 94%,rgba(255,255,255,.45),transparent 70%),radial-gradient(ellipse 55% 45% at 50% 55%,rgba(255,255,255,.18),transparent 70%)}
-.rw .robot{height:100%;flex:none;max-width:100%}
-.stats{margin:0 26px 22px;padding:14px 6px;gap:0;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.32);border-radius:22px}
-.st{background:none;border:0;border-radius:0;padding:4px 8px}
-.st+.st{border-left:1.5px solid rgba(255,255,255,.28)}
-.mi{flex-direction:row;align-items:center;gap:16px}
-.mi>div{display:flex;flex-direction:column;gap:3px}
-.mi em{flex:none;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  font-style:normal;font-weight:800;font-size:18px;color:#fff;background:linear-gradient(135deg,#2f6bff,#8a2cff);box-shadow:0 6px 14px rgba(80,60,200,.3)}
-.mi span{font-size:20px;white-space:nowrap}
-.mi .th{flex:none;width:112px;height:86px;border-radius:18px;background:#fff;box-shadow:0 6px 16px rgba(60,50,160,.18);
-  display:flex;align-items:center;justify-content:center;gap:2px;padding:8px}
-.mi .th img{max-width:100%;max-height:100%;object-fit:contain}
-.mi .th.two img{max-width:49%}
-.mi{padding:16px 0;gap:14px}
-.mi b{font-size:23px}
-.mi span:not(.th){font-size:18px;white-space:normal;line-height:1.25}
-.mcap{padding-bottom:2px}
-.mi b{font-size:21px;white-space:nowrap}
-.mi span:not(.th){font-size:19px;white-space:nowrap}
+/* contact column */
+.contact{background:#fff;border-radius:30px;color:#0a3170;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px 16px;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.contact .h{font-size:19px;font-weight:900;letter-spacing:2px;text-align:center;line-height:1.25}
+.qr{display:flex;flex-direction:column;align-items:center;gap:4px}
+.qr img{width:146px;height:146px;display:block;border-radius:8px}
+.qr .n{font-size:17px;font-weight:800}
+.hot{margin-top:6px;text-align:center;border-top:2px solid #e3e8f2;padding-top:12px;width:100%}
+.hot .k{font-size:14px;font-weight:800;letter-spacing:3px;color:#5b6b8e}
+.hot .p{font-size:25px;font-weight:900;white-space:nowrap}
 </style></head><body>
 <div class="bg">
-  <div class="ring" style="width:520px;height:520px;right:-160px;top:-200px"></div>
-  <div class="ring" style="width:340px;height:340px;right:-60px;top:-110px;border-color:rgba(255,224,102,.35)"></div>
-  <div class="ring" style="width:620px;height:620px;left:-280px;bottom:-330px;border-color:rgba(255,138,194,.35)"></div>
+  <div class="ring" style="width:620px;height:620px;right:-220px;top:-260px"></div>
+  <div class="ring" style="width:420px;height:420px;right:-120px;top:-160px"></div>
+  <div class="ring" style="width:700px;height:700px;left:-340px;bottom:-400px"></div>
 </div>
 
 <div class="top">
-  <div class="welcome">
-    <div class="k">CHÀO MỪNG QUÝ ĐẠI BIỂU THAM DỰ</div>
-    <h1>HỘI NGHỊ VOA</h1>
+  <div class="title">
+    <div class="l1 t">CÔNG NGHỆ TIÊN TIẾN</div>
+    <div class="l2 t">trong Phẫu thuật Cột sống &amp; Chấn thương Chỉnh hình</div>
   </div>
   <div class="tlqt"><img class="em" src="img/tl_emblem.png" alt=""><img class="wd" src="img/tl_word.png" alt="Dịch vụ Y Khoa Thăng Long Quốc Tế"></div>
 </div>
 
-<div class="cards">
-  <div class="card cx">
-    <div class="head"><img class="logo" src="img/43.png" alt="Curexo"><div class="certs-row"><img class="wm" src="img/c_ce.png" alt="CE"><img class="wm" src="img/c_fda.png" alt="FDA"></div></div>
-    <div class="stage">
-      <span class="chip"><img src="img/38.png" alt="CUVIS Spine"></span>
-      <span class="lbl">Robot định vị<br>phẫu thuật cột sống</span>
-      <div class="rw"><img class="robot shadow" src="img/37.png" alt=""></div>
-    </div>
-  </div>
-
+<div class="main">
+  <!-- ALLGENS -->
   <div class="card ag">
     <div class="head"><img class="logo" src="img/35.png" alt="Allgens"><div class="certs-row"><img class="wm" src="img/c_fda.png" alt="FDA"><img class="wm" src="img/c_iso.png" alt="ISO"></div></div>
     <div class="stage">
-      <div class="cap">XƯƠNG NHÂN TẠO COLLAGEN KHOÁNG HÓA</div><div class="tag">Mô phỏng cấu trúc nano của xương tự nhiên</div>
-      <div class="prod"><span class="chip"><img src="img/23.png" alt="BonGold"></span><div class="piw"><img class="pi shadow" src="img/40.png" alt=""></div><span class="lbl">Chấn thương<br>chỉnh hình</span></div>
-      <div class="prod flip"><span class="chip"><img src="img/34.png" alt="Skulheal"></span><div class="piw"><img class="pi shadow" src="img/36.png" alt=""></div><span class="lbl">Ngoại thần kinh</span></div>
-    
+      <div class="cap t">VẬT LIỆU XƯƠNG SINH HỌC COLLAGEN KHOÁNG HÓA</div>
+      <div class="slogan">
+        <div class="s"><span class="chk"></span><span class="t">Đạt chứng nhận <b>FDA Hoa Kỳ</b></span></div>
+        <div class="s"><span class="chk"></span><span class="t">Tương đồng cao với <b>xương tự thân</b></span></div>
+      </div>
+      <div class="prods">
+        <div class="prod"><div class="info"><span class="chip"><img src="img/23.png" alt="BonGold"></span><span class="lbl t">Chấn thương<br>chỉnh hình</span></div><div class="piw"><img class="shadow" src="img/40.png" alt=""></div></div>
+        <div class="prod flip"><div class="info"><span class="chip"><img src="img/34.png" alt="Skulheal"></span><span class="lbl t">Ngoại thần kinh</span></div><div class="piw"><img class="shadow" src="img/36.png" alt=""></div></div>
+      </div>
       <div class="stats">
-        <div class="st"><b>45 : 55</b><span>Collagen I : nano-HA</span></div>
-        <div class="st"><b>70–80%</b><span>Độ xốp</span></div>
-        <div class="st"><b>&gt;200.000</b><span>Ca lâm sàng</span></div>
-        <div class="st"><b>510(k)</b><span>FDA</span></div>
+        <div class="st"><b class="t">45 : 55</b><span class="t">Collagen I : nano-HA</span></div>
+        <div class="st"><b class="t">70–80%</b><span class="t">Độ xốp</span></div>
+        <div class="st"><b class="t">&gt;200.000</b><span class="t">Ca lâm sàng</span></div>
       </div>
     </div>
   </div>
 
-  <div class="card mz">
-    <div class="head"><img class="logo" src="img/19.png" alt="Mantiz"><div class="certs-row"><img class="bd" src="img/c_iso13485.png" alt="ISO 13485:2016"><img class="bd" src="img/c_gmp.png" alt="GMP"></div></div>
-    <div class="stage mlist"><div class="mcap">HỆ THỐNG CỘT SỐNG</div><div class="mi"><span class="th two"><img src="img/25.png" alt=""><img src="img/26.png" alt=""></span><div><b>PANTHER</b><span>Lồng thắt lưng in 3D</span></div></div><div class="mi"><span class="th two"><img src="img/28.png" alt=""><img src="img/29.png" alt=""></span><div><b>PETRA</b><span>Lồng cổ in 3D</span></div></div><div class="mi"><span class="th"><img src="img/31.png" alt=""></span><div><b>QUATTRO</b><span>Vít cuống sống</span></div></div><div class="mi"><span class="th"><img src="img/33.png" alt=""></span><div><b>QUATTRO GADGET</b><span>Vít qua da ít xâm lấn</span></div></div></div>
+  <!-- SPINE SOLUTION -->
+  <div class="card sp">
+    <div class="head">
+      <div class="grp"><img class="logo cx" src="img/43.png" alt="Curexo"><div class="certs-row"><img class="wm" src="img/c_ce.png" alt="CE"><img class="wm" src="img/c_fda.png" alt="FDA"></div></div>
+      <span class="sep"></span>
+      <div class="grp"><img class="logo mz" src="img/19.png" alt="Mantiz"><div class="certs-row"><img class="bd" src="img/c_iso13485.png" alt="ISO 13485"><img class="bd" src="img/c_gmp.png" alt="GMP"></div></div>
+    </div>
+    <div class="stage">
+      <div class="cap t">GIẢI PHÁP TÍCH HỢP CHO PHẪU THUẬT CỘT SỐNG</div>
+      <div class="cols">
+        <div class="robotcol">
+          <span class="chip"><img src="img/38.png" alt="CUVIS Spine"></span>
+          <div class="rw"><img class="shadow" src="img/37.png" alt=""></div>
+          <div class="benefits">
+            <div class="b"><span class="chk"></span><span class="t">Độ chính xác cao</span></div>
+            <div class="b"><span class="chk"></span><span class="t">Giảm phơi nhiễm tia X</span></div>
+            <div class="b"><span class="chk"></span><span class="t">Tối ưu hóa quy trình phẫu thuật</span></div>
+          </div>
+        </div>
+        <div class="implants">
+          <div class="grp3d">
+            <span class="tag t">CÔNG NGHỆ IN 3D</span>
+            <div class="d t">Cấu trúc xốp tối ưu hóa tích hợp xương</div>
+            <div class="mi"><span class="th two"><img src="img/25.png" alt=""><img src="img/26.png" alt=""></span><div class="nm"><b class="t">PANTHER</b><span class="t">Lồng thắt lưng in 3D</span></div></div>
+            <div class="mi"><span class="th two"><img src="img/28.png" alt=""><img src="img/29.png" alt=""></span><div class="nm"><b class="t">PETRA</b><span class="t">Lồng cổ in 3D</span></div></div>
+          </div>
+          <div class="mi solo"><span class="th"><img src="img/31.png" alt=""></span><div class="nm"><b class="t">QUATTRO</b><span class="t">Vít cuống sống</span></div></div>
+          <div class="mi solo"><span class="th"><img src="img/33.png" alt=""></span><div class="nm"><b class="t">QUATTRO GADGET</b><span class="t">Vít qua da · Ít xâm lấn (MIS)</span></div></div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
-<div class="foot">
-  <span class="l">LIÊN HỆ</span><span class="p">0916 899 322</span>
+  <!-- CONTACT -->
+  <div class="contact">
+    <div class="h t">KẾT NỐI<br>VỚI CHÚNG TÔI</div>
+    <div class="qr"><img src="img/qr_zalo.png" alt="QR Zalo"><span class="n t">Zalo</span></div>
+    <div class="qr"><img src="img/qr_tiktok.png" alt="QR TikTok"><span class="n t">TikTok</span></div>
+    <div class="qr"><img src="img/qr_instagram.png" alt="QR Instagram"><span class="n t">Instagram</span></div>
+    <div class="hot"><div class="k t">HOTLINE</div><div class="p t">0916 899 322</div></div>
+  </div>
 </div>
 </body></html>
